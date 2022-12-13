@@ -455,7 +455,6 @@ Sample Input 2:
 Sample Output 2:
 Not a winner
  
-<<<<<<< HEAD
 ----------Solution-------------
 import java.util.Scanner;
 
@@ -506,8 +505,6 @@ public class LuckyPrice4 {
 }
 
 
-=======
->>>>>>> origin/jag
  
 
 -----------------------
@@ -566,7 +563,6 @@ Sample Input 2:
 Sample Output 2:
 -1
  
-<<<<<<< HEAD
 
 
 String
@@ -780,5 +776,39 @@ Sample Input :
 Sample Output :
 4
 3
-=======
->>>>>>> origin/jag
+
+
+
+
+Steps to solve this problem:
+1) Create an object of scanner
+2) ask the number of elements	n
+3) create an array of int of size 	n
+4) accept n inputs from the user
+	arr[i]=sc.nextInt();
+5) display all the elements of the array
+
+6) algorithm now:
+	1) check every element whether it is an even number or not
+	2) keep a variable "runLenght" and increment the variable if current element is an even number
+
+	3) every time, an odd number is found, then reset the runLength to 0
+
+	4) keep another variable, maxRunLength and assign the value of runLength conditionally
+		only when runLength is > than maxRunLength
+		maxRunLength=runLength;
+
+	5) keep another variable, startIndex	=	-1
+		everytime, runLength==1 then startIndex=i
+
+	6) Keep another variable, maxStartIndex	=	-1
+		in 4th step, maxRunLength is updated, update maxStartIndex=startIndex
+
+
+
+
+
+
+
+
+
