@@ -1,0 +1,302 @@
+Lab setup
+-------------
+1) jdk 8
+	check
+		go to cmd prompt
+			java -version
+
+2) eclipse / sts
+
+	eclipse is there
+
+----------------------------------------------
+Object Oriented programming
+	inheritance
+	polymorphism
+	encapsulation
+	abstraction
+Platform independent		java language is same
+portable
+robust and secure
+supports multithreading
+compiler and interpreter
+
+Compilation process of java program
+	source code
+	byte code
+
+java program (source code) is not translated directly to machine language
+	first it is translated into byte code	(compiler do this)
+
+	1) javac		java compiler
+	2) JIT		just in time compiler
+
+in c or c++, the source code is translated (by the compiler) into machine language code.
+	if compiler translates the code into a machine language code, then it works only in that kind of machine
+
+	32 bit machine
+	64 bit machine
+
+
+A	65	0000 0000 100 0001
+a	97
+
+
+
+JDK	(Java Development Kit)	vs 	JRE	(Java Runtime Environment)	
+--------------------------------------
+JDK is for developers	(who will compile also)	
+JRE is for customers (who just run)
+
+Data types
+Arrays
+Programming constructs
+	if
+	if else
+	switch
+	while
+	for 
+	for each
+
+	methods
+Access specifiers and modifiers
+
+OOPS
+
+A java class name should follow these guidelines:
+
+1) your class name is like 	firstprogram	NOT CORRECT. 	It cannot start with lower case
+	correct way		PascalCase
+
+	ex:
+		FirstProgram
+		Employee
+		Product
+		Order
+	
+2) class name must be a noun
+	like an entity
+
+3) should not start with a verb		a method name starts with a verb plus a noun	
+	AcceptDetails		(wrong)
+		method name:		acceptDetails()
+	CalculateSimpleInterest	(wrong)
+
+
+new
+void
+static
+final
+transient
+volatile
+
+instanceof
+
+Method naming conventions:
+	starts with a verb and ends with a noun
+
+
+Variable naming conventions:
+
+class JavaStudent
+
+ArrayIndexOutOfBoundsException
+
+InputMismatchException
+
+StringBuilder
+
+
+class User
+
+
+Data types
+--------------
+boolean		1 bit
+char
+
+byte		8 bits	1 byte			1111 1111	=	255	-128 to 127
+short		16 bits	2 bytes				65535		-32768 to 32767
+int		32 bits	4 bytes
+long		64 bits	8 bytes
+
+float		32 bit	4 bytes
+double		64 bit	8 bytes
+
+
+-2
+-1
+0
+1
+2
+3
+4
+5
+
+
+FULL_CAPITAL is used for CONSTANTS
+
+final String COMPANY_NAME="Capgemini";
+
+private Integer mobile;		1234567890		9876543210
+
+Primitive Data types		fundamental	
+------------------------------
+Data Type	Size	Description
+byte	1 byte	Stores whole numbers from -128 to 127
+short	2 bytes	Stores whole numbers from -32,768 to 32,767
+int	4 bytes	Stores whole numbers from -2,147,483,648 to 2,147,483,647
+long	8 bytes	Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+float	4 bytes	Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
+double	8 bytes	Stores fractional numbers. Sufficient for storing 15 decimal digits
+boolean	1 bit	Stores true or false values
+char	2 bytes	Stores a single character/letter or ASCII values	java uses Unicode
+
+ASCII
+	
+0	null		0000 0000
+48	0
+65	A
+97	a
+
+255			1111 1111
+
+
+256			0000 0001 1111 1111		
+
+unicode is 16 bit representation of any character
+
+UTF-8		Unicode Text Format - 8 bit representation
+
+
+int i=20;
+int j=30;
+int k=i+j;
+
+public class SecondProgram
+{
+	public static void main(String []args)
+	{
+		char c='9';
+		int i=c-48;
+		System.out.println(i);
+	}
+}
+
+
+
+
+
+What is casting?
+	Where and all casting is supported?
+
+byte		Byte
+short		Short
+int		Integer
+long		Long
+
+float		Float
+double		Double
+
+char		Character
+boolean		Boolean
+
+
+value types		all primitives are value types
+
+int x=20;		what is x?		x is a variable of int type.	
+		this variable name is a representation of a memory location
+
+		if you go and see that location, what you see there?	is a value
+
+
+Employee raja=new Employee();
+		if you go and see "raja" variable, what you see there?	is not a value, but a reference to an object of employee
+
+
+Memory
+	stack
+	heap
+
+if you create a variable of primitive type, then
+	it is a value type
+
+Student raja=new Student();
+Date dt=new Date();
+
+
+Employee siva=null;
+siva=new Employee();
+new Employee();
+
+--------------------------------
+To get input from user we can use Scanner
+
+Scanner class belongs to java.util package
+
+Scanner sc=new Scanner(System.in);
+
+inputs can be separated by any delimiter
+	space
+	tab
+	new line
+
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int no1=sc.nextInt();
+		int no2=sc.nextInt();
+		
+		System.out.println("Your inputs are ");
+		System.out.println(no1);
+		System.out.println(no2);		
+	}
+}
+
+
+
+
+Dice Game I
+
+Each player will be allowed to throw  a dice 2 times. The points for each player will be calculated as follows :
+If the values thrown are different, the points scored is equal to the sum of the 2 values.
+If the values thrown are the same, the points scored is equal to double the sum of the 2 values.
+
+Write a program to calculate the points scored by a player.
+
+Input and Output Format:
+
+Input consists of 2 integers. The valid range of inputs is from 0 to 6. [ Both 0 and 6 inclusive]
+Output the points scored. In case of invalid inputs, print “Invalid Input”.
+
+Refer sample input and output for formatting specificaions.
+
+[All text in bold corresponds to input and the rest corresponds to output.]
+Sample Input and Output 1:
+
+Enter Value 1:
+5
+Enter Value 2:
+6
+The points scored is 11
+
+Sample Input and Output 2:
+
+Enter Value 1:
+5
+Enter Value 2:
+5
+The points scored is  20
+
+Sample Input and Output 3:
+
+Enter Value 1:
+8
+Enter Value 2:
+6
+Invalid Input 
+
