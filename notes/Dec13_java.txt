@@ -425,3 +425,91 @@ if
 else
 {
 }
+
+-----------------------------------------------------------
+Lucky Prize IV
+ 	
+In all the theatres in the Amphi Multiplex, prizes will be given to few lucky winners every day.
+The lucky winners will be decided based on the ticket number and the criteria set for that day.
+ 
+The criteria set for day 4 is that prizes will be given to all ticket holders whose ticket number satisy both the conditions given below :
+1.	The ticket number is a palindrome
+2.	The sum of the digits in the ticket number is even
+ 
+Given a ticket number, write a program to determine whether that ticket holder will be a lucky prize winner or not.
+ 
+Input and Output Format:
+ 
+Input consists of an integer that corresponds to the ticket number.
+Output consists of a string that is either “Winner” or “Not a winner”
+ 
+Sample Input 1:
+525
+ 
+Sample Output 1:
+Winner
+ 
+Sample Input 2:
+7896
+ 
+Sample Output 2:
+Not a winner
+ 
+ 
+
+-----------------------
+Percentage of Runs
+Sam is a cricket freak, who loves to collect statistics about the matches. Suppose, a batsman scored X runs which included Y fours and Z sixes, Sam wants to calculate the  percentage of the total score he made by running between the wickets.
+Write a program to help Sam .
+Input Format:
+First input is an integer X that denotes the total runs scored.
+Second input is an integer Y that denotes the  number of fours he has scored.
+Third input is an integer Z that denotes the  number of sixes he has scored.
+[Note: Assume all inputs are valid.] 
+Output Format:
+Output is a double value that denotes the percentage of runs he made by running between the wickets(rounded off to 2 decimal places).
+Sample Input 1:
+110
+3
+8
+Sample Output 1:
+45.45
+Sample Input 2:
+60
+2
+1
+Sample Output 2:
+76.66
+
+Explanation for sample 1:
+Total Runs = 110
+No. of Fours = 3
+No. of sixes = 8
+Total runs scored by boundaries = 4*3 + 8*6 = 60
+Therefore, runs scored by running between the wickets = 110 - 60 = 50
+Percentage scored by running =(50/110)*100 =  45.45 
+ 
+Maximum Product
+Playing with arrays has become a hobby for Arun. This time Arun wants to find the greatest number in the array such that it is the product of any two numbers in the array.
+Write a program to help Arun to the do the task. If no such number exists, then print -1.
+[Note: The two number that are used to find the product can be the number itself.  For example, if the array elements are [1,2,3] , then 1*3 = 3 will be the solution for this array.]
+
+Input Format :
+First input is an integer value that denotes the size of the array.
+Second input is a series of integers separated by space that denotes the array values.
+
+Output Format :
+Output is an  integer that denotes the maximum product.
+
+Sample Input 1:
+5
+35 30 7 6 5
+Sample Output 1:
+35
+
+Sample Input 2:
+5
+2 4 6 89 78
+Sample Output 2:
+-1
+ 
