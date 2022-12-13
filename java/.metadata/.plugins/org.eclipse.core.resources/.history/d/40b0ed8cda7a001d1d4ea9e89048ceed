@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class RunLength4 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		//get n inputs from the user and assign them to the array
+		for(int i=0;i<n;i++)
+		{
+			
+		}
+		
+	}
+
+}

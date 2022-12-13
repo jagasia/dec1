@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class RunLength4 {
+
+	public static void main(String[] args) {
+		int runLength=0;
+		int maxRunLength=0;
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		//get n inputs from the user and assign them to the array
+		for(int i=0;i<n;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+		
+		//display
+		System.out.println("Displaying the array elements");
+		for(int i=0;i<n;i++)
+		{
+			if(arr[i]%2==0)
+			{
+				System.out.println(arr[i]);
+				runLength++;
+				if(runLength>maxRunLength)
+					maxRunLength=runLength;
+				System.out.printf("RunLength=%d\tMaxRunLength=%d\n",runLength,maxRunLength);
+			}else
+			{
+				runLength=0;
+			}
+		}
+		
+	}
+
+}
