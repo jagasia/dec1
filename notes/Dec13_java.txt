@@ -455,6 +455,7 @@ Sample Input 2:
 Sample Output 2:
 Not a winner
  
+<<<<<<< HEAD
 ----------Solution-------------
 import java.util.Scanner;
 
@@ -505,6 +506,8 @@ public class LuckyPrice4 {
 }
 
 
+=======
+>>>>>>> origin/jag
  
 
 -----------------------
@@ -563,6 +566,7 @@ Sample Input 2:
 Sample Output 2:
 -1
  
+<<<<<<< HEAD
 
 
 String
@@ -776,3 +780,5 @@ Sample Input :
 Sample Output :
 4
 3
+=======
+>>>>>>> origin/jag

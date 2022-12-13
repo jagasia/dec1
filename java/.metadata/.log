@@ -344,6 +344,7 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+<<<<<<< HEAD
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-13 14:48:34.177
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.cbFqZZQE
@@ -668,3 +669,5 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-13 14:48:55.287
 !MESSAGE executing callback sts4.classpath.DQCAHyVA SUCCESS [done]
+=======
+>>>>>>> origin/jag
