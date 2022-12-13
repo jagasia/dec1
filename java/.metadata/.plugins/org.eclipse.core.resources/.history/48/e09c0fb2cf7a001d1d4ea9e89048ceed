@@ -1,0 +1,16 @@
+
+public class Dummy {
+
+	public static void main(String[] args) {
+		Object arr[]=new Object[10];
+		arr[0]=new Integer(10);
+		arr[1]=new Float(15.5f);
+		arr[2]="Raja";
+		
+		arr=new Object[20];
+		
+		
+		
+	}
+
+}

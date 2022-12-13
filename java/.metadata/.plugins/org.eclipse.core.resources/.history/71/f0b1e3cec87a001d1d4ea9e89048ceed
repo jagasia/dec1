@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class LuckyPrice4 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int input=sc.nextInt();
+		//to find if input is a palindrome number or not?
+		int reverse=0;
+		int x=input;
+		int sumOfDigits=0;
+		while(input>0)
+		{
+			int lastDigit=input%10;
+			sumOfDigits+=lastDigit;
+			reverse*=10;
+			reverse+=lastDigit;
+			input/=10;			
+		}
+	
+		//palindrome or not
+		boolean isPalindrome=false, isEven=false;
+		isPalindrome=x==reverse;
+		
+//		if(x==reverse)
+//		{
+//			isPalindrome=true;
+//		}
+		
+		//sum of digits is even number or not
+		sc.close();
+	}
+	
+
+}
