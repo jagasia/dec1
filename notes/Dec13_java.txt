@@ -1,0 +1,575 @@
+Lab setup
+-------------
+1) jdk 8
+	check
+		go to cmd prompt
+			java -version
+
+2) eclipse / sts
+
+	eclipse is there
+
+----------------------------------------------
+Object Oriented programming
+	inheritance
+	polymorphism
+	encapsulation
+	abstraction
+Platform independent		java language is same
+portable
+robust and secure
+supports multithreading
+compiler and interpreter
+
+Compilation process of java program
+	source code
+	byte code
+
+java program (source code) is not translated directly to machine language
+	first it is translated into byte code	(compiler do this)
+
+	1) javac		java compiler
+	2) JIT		just in time compiler
+
+in c or c++, the source code is translated (by the compiler) into machine language code.
+	if compiler translates the code into a machine language code, then it works only in that kind of machine
+
+	32 bit machine
+	64 bit machine
+
+
+A	65	0000 0000 100 0001
+a	97
+
+
+
+JDK	(Java Development Kit)	vs 	JRE	(Java Runtime Environment)	
+--------------------------------------
+JDK is for developers	(who will compile also)	
+JRE is for customers (who just run)
+
+Data types
+Arrays
+Programming constructs
+	if
+	if else
+	switch
+	while
+	for 
+	for each
+
+	methods
+Access specifiers and modifiers
+
+OOPS
+
+A java class name should follow these guidelines:
+
+1) your class name is like 	firstprogram	NOT CORRECT. 	It cannot start with lower case
+	correct way		PascalCase
+
+	ex:
+		FirstProgram
+		Employee
+		Product
+		Order
+	
+2) class name must be a noun
+	like an entity
+
+3) should not start with a verb		a method name starts with a verb plus a noun	
+	AcceptDetails		(wrong)
+		method name:		acceptDetails()
+	CalculateSimpleInterest	(wrong)
+
+
+new
+void
+static
+final
+transient
+volatile
+
+instanceof
+
+Method naming conventions:
+	starts with a verb and ends with a noun
+
+
+Variable naming conventions:
+
+class JavaStudent
+
+ArrayIndexOutOfBoundsException
+
+InputMismatchException
+
+StringBuilder
+
+
+class User
+
+
+Data types
+--------------
+boolean		1 bit
+char
+
+byte		8 bits	1 byte			1111 1111	=	255	-128 to 127
+short		16 bits	2 bytes				65535		-32768 to 32767
+int		32 bits	4 bytes
+long		64 bits	8 bytes
+
+float		32 bit	4 bytes
+double		64 bit	8 bytes
+
+
+-2
+-1
+0
+1
+2
+3
+4
+5
+
+
+FULL_CAPITAL is used for CONSTANTS
+
+final String COMPANY_NAME="Capgemini";
+
+private Integer mobile;		1234567890		9876543210
+
+Primitive Data types		fundamental	
+------------------------------
+Data Type	Size	Description
+byte	1 byte	Stores whole numbers from -128 to 127
+short	2 bytes	Stores whole numbers from -32,768 to 32,767
+int	4 bytes	Stores whole numbers from -2,147,483,648 to 2,147,483,647
+long	8 bytes	Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+float	4 bytes	Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
+double	8 bytes	Stores fractional numbers. Sufficient for storing 15 decimal digits
+boolean	1 bit	Stores true or false values
+char	2 bytes	Stores a single character/letter or ASCII values	java uses Unicode
+
+ASCII
+	
+0	null		0000 0000
+48	0
+65	A
+97	a
+
+255			1111 1111
+
+
+256			0000 0001 1111 1111		
+
+unicode is 16 bit representation of any character
+
+UTF-8		Unicode Text Format - 8 bit representation
+
+
+int i=20;
+int j=30;
+int k=i+j;
+
+public class SecondProgram
+{
+	public static void main(String []args)
+	{
+		char c='9';
+		int i=c-48;
+		System.out.println(i);
+	}
+}
+
+
+
+
+
+What is casting?
+	Where and all casting is supported?
+
+byte		Byte
+short		Short
+int		Integer
+long		Long
+
+float		Float
+double		Double
+
+char		Character
+boolean		Boolean
+
+
+value types		all primitives are value types
+
+int x=20;		what is x?		x is a variable of int type.	
+		this variable name is a representation of a memory location
+
+		if you go and see that location, what you see there?	is a value
+
+
+Employee raja=new Employee();
+		if you go and see "raja" variable, what you see there?	is not a value, but a reference to an object of employee
+
+
+Memory
+	stack
+	heap
+
+if you create a variable of primitive type, then
+	it is a value type
+
+Student raja=new Student();
+Date dt=new Date();
+
+
+Employee siva=null;
+siva=new Employee();
+new Employee();
+
+--------------------------------
+To get input from user we can use Scanner
+
+Scanner class belongs to java.util package
+
+Scanner sc=new Scanner(System.in);
+
+inputs can be separated by any delimiter
+	space
+	tab
+	new line
+
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int no1=sc.nextInt();
+		int no2=sc.nextInt();
+		
+		System.out.println("Your inputs are ");
+		System.out.println(no1);
+		System.out.println(no2);		
+	}
+}
+
+
+
+
+Dice Game I
+
+Each player will be allowed to throw  a dice 2 times. The points for each player will be calculated as follows :
+If the values thrown are different, the points scored is equal to the sum of the 2 values.
+If the values thrown are the same, the points scored is equal to double the sum of the 2 values.
+
+Write a program to calculate the points scored by a player.
+
+Input and Output Format:
+
+Input consists of 2 integers. The valid range of inputs is from 0 to 6. [ Both 0 and 6 inclusive]
+Output the points scored. In case of invalid inputs, print “Invalid Input”.
+
+Refer sample input and output for formatting specificaions.
+
+[All text in bold corresponds to input and the rest corresponds to output.]
+Sample Input and Output 1:
+
+Enter Value 1:
+5
+Enter Value 2:
+6
+The points scored is 11
+
+Sample Input and Output 2:
+
+Enter Value 1:
+5
+Enter Value 2:
+5
+The points scored is  20
+
+Sample Input and Output 3:
+
+Enter Value 1:
+8
+Enter Value 2:
+6
+Invalid Input 
+
+https://github.com/jagasia/dec1
+
+------------------------------------------------------
+import java.util.Scanner;
+
+public class Challenge1 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Value 1:");
+		int value1=sc.nextInt();
+		
+		System.out.println("Enter Value 2:");
+		int value2=sc.nextInt();
+		
+		if(value1<0 || value1>6 || value2<0 || value2>6)
+		{
+			System.out.println("Invalid Input");
+			System.exit(0); 	//terminate the program here
+		}
+		
+		//now that the inputs are valid only. sum the values
+		int sum=value1+value2;
+		if(value1==value2)
+		{
+			sum*=2;
+		}
+		
+		System.out.println("The points scored is  "+sum);
+		sc.close();
+	}
+
+}
+----------------------------------------------
+Dice Game II
+Each player will be allowed to throw a dice 2 times. The points for each player will be calculated as follows :
+The points scored is the absolute difference between 8 and the sum of the 2 values, provided the sum of the 2 values is less than 8.
+In all other cases, the point  scored is double the absolute difference between 8 and the sum of the 2 values.
+
+Write a program to calculate the points scored by a player.
+
+Input and Output Format:
+Input consists of 2 integers. The valid range of inputs is from 0 to 6.
+Output the points scored. In case of invalid inputs, print “Invalid Input”.
+
+Refer sample input and output for formatting specificaions.
+
+[All text in bold corresponds to input and the rest corresponds to output.]
+Sample Input and Output 1:
+
+Enter Value 1:
+5
+Enter Value 2:
+6
+The points scored is 6
+
+Sample Input and Output 2:
+
+Enter Value 1:
+3
+Enter Value 2:
+2
+The points scored is  3
+
+Sample Input and Output 3:
+
+Enter Value 1:
+8
+Enter Value 2:
+6
+Invalid Input 
+
+
+-------------------------------
+Solution:
+------------
+import java.util.Scanner;
+
+public class Challenge2 {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Value 1:");
+		int value1=sc.nextInt();
+		System.out.println("Enter Value 2:");
+		int value2=sc.nextInt();
+		
+		if(value1<0 || value1>6 || value2<0 || value2>6)
+		{	
+			System.out.println("Invalid Input");
+			System.exit(0);
+		}
+		int sum=value1+value2;
+		int absDifference=Math.abs(8-sum);
+		
+		
+		if(sum>=8)
+		{
+			absDifference*=2;
+		}
+
+		System.out.println("The points scored is "+absDifference);
+	}
+}
+
+
+-----------------------------------
+we use brackets to group multiple lines. For a single line in true part or else part, {}brackets are not mandatory.
+{
+}
+
+
+if
+else if
+else
+
+
+
+
+
+if
+{
+}
+else
+{
+}
+
+-----------------------------------------------------------
+Lucky Prize IV
+ 	
+In all the theatres in the Amphi Multiplex, prizes will be given to few lucky winners every day.
+The lucky winners will be decided based on the ticket number and the criteria set for that day.
+ 
+The criteria set for day 4 is that prizes will be given to all ticket holders whose ticket number satisy both the conditions given below :
+1.	The ticket number is a palindrome
+2.	The sum of the digits in the ticket number is even
+ 
+Given a ticket number, write a program to determine whether that ticket holder will be a lucky prize winner or not.
+ 
+Input and Output Format:
+ 
+Input consists of an integer that corresponds to the ticket number.
+Output consists of a string that is either “Winner” or “Not a winner”
+ 
+Sample Input 1:
+525
+ 
+Sample Output 1:
+Winner
+ 
+Sample Input 2:
+7896
+ 
+Sample Output 2:
+Not a winner
+ 
+----------Solution-------------
+import java.util.Scanner;
+
+public class LuckyPrice4 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int input=sc.nextInt();
+		//to find if input is a palindrome number or not?
+		int reverse=0;
+		int x=input;
+		int sumOfDigits=0;
+		while(input>0)
+		{
+			int lastDigit=input%10;
+			sumOfDigits+=lastDigit;
+			reverse*=10;
+			reverse+=lastDigit;
+			input/=10;			
+		}
+	
+		//palindrome or not
+		boolean isPalindrome=false, isEven=false;
+		isPalindrome=x==reverse;
+		
+//		if(x==reverse)
+//		{
+//			isPalindrome=true;
+//		}
+		
+		//sum of digits is even number or not
+		isEven=sumOfDigits%2==0;
+//		if(sumOfDigits%2==0)
+//			isEven=true;
+		
+		if(isPalindrome && isEven)
+		{
+			System.out.println("Winner");
+		}else
+		{
+			System.out.println("Not a winner");
+		}
+		
+		sc.close();
+	}
+	
+
+}
+
+
+ 
+
+-----------------------
+Percentage of Runs
+Sam is a cricket freak, who loves to collect statistics about the matches. Suppose, a batsman scored X runs which included Y fours and Z sixes, Sam wants to calculate the  percentage of the total score he made by running between the wickets.
+Write a program to help Sam .
+Input Format:
+First input is an integer X that denotes the total runs scored.
+Second input is an integer Y that denotes the  number of fours he has scored.
+Third input is an integer Z that denotes the  number of sixes he has scored.
+[Note: Assume all inputs are valid.] 
+Output Format:
+Output is a double value that denotes the percentage of runs he made by running between the wickets(rounded off to 2 decimal places).
+Sample Input 1:
+110
+3
+8
+Sample Output 1:
+45.45
+Sample Input 2:
+60
+2
+1
+Sample Output 2:
+76.66
+
+Explanation for sample 1:
+Total Runs = 110
+No. of Fours = 3
+No. of sixes = 8
+Total runs scored by boundaries = 4*3 + 8*6 = 60
+Therefore, runs scored by running between the wickets = 110 - 60 = 50
+Percentage scored by running =(50/110)*100 =  45.45 
+ 
+Maximum Product
+Playing with arrays has become a hobby for Arun. This time Arun wants to find the greatest number in the array such that it is the product of any two numbers in the array.
+Write a program to help Arun to the do the task. If no such number exists, then print -1.
+[Note: The two number that are used to find the product can be the number itself.  For example, if the array elements are [1,2,3] , then 1*3 = 3 will be the solution for this array.]
+
+Input Format :
+First input is an integer value that denotes the size of the array.
+Second input is a series of integers separated by space that denotes the array values.
+
+Output Format :
+Output is an  integer that denotes the maximum product.
+
+Sample Input 1:
+5
+35 30 7 6 5
+Sample Output 1:
+35
+
+Sample Input 2:
+5
+2 4 6 89 78
+Sample Output 2:
+-1
+ 
+
+
+String
+Exception handling
+Collections
+
+
+MCQ		40 questions		40 marks
+Programming 	3 questions			60 marks
+

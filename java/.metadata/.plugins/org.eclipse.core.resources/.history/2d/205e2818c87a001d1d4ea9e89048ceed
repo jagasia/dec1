@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class LuckyPrice4 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int input=sc.nextInt();
+		//to find if input is a palindrome number or not?
+		int reverse=0;
+		while(input>0)
+		{
+			System.out.println(input);
+			int lastDigit=input%10;
+			reverse*=10;
+			reverse+=lastDigit;
+			System.out.println("reverse "+reverse);
+			input/=10;			
+		}
+		
+		System.out.println("------------");
+		System.out.println("Comparing "+input+" and "+reverse);
+		if(input==reverse)
+			System.out.println("Palindrome");
+		else
+			System.out.println("Not palindrome");
+		sc.close();
+	}
+
+}
