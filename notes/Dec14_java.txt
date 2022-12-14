@@ -1,0 +1,99 @@
+Arrays
+--------
+single dimensional arrays
+multi dimensional arrays
+
+Declaration:
+------------------
+int []marks;	//in java, this is fine
+int marks[];	//in java, this is also fine
+
+int marks[10];		//c++
+
+int []marks;		//declaration
+marks=new int[10];		//create the array
+
+
+int []marks=new int[10];	
+
+int marks[]={90,100,80,20,50,40,30};		//we can create an array like this also
+	the above array is created of size 7
+
+marks[0]=100;		//it was 90 and now it is changed to 100
+
+{}	are used to create a block
+{}	use to represent an array
+
+
+
+import java.util.Arrays;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int marks[]={90,100,80,20,50,40,30};
+		System.out.println(Arrays.toString(marks));
+	}
+
+}
+
+
+
+
+Array has a "length" property
+
+		for(int i=0;i<marks.length;i++)
+		{
+			System.out.println(marks[i]);
+		}
+
+
+for - each loop
+	useful for iterating all elements of an array or collection
+
+-------------------------------------------
+Multi dimensional array
+---------------------------------
+int [][]marks=new int[10][10];
+
+marks[0][0]=100;
+marks[0][1]
+marks[0][2]
+marks[0][3]
+....
+marks[0][9]
+
+marks[1][0]
+marks[1][1]
+..
+marks[1][9]
+
+
+
+Java multi dimensional arrays are Jagged arrays.
+
+
+int [][][]marks=new int[10][10][10];
+
+
+
+
+public class TwoDimensionalArray {
+
+	public static void main(String[] args) {
+		int marks[][]= {
+				{1,2,3,4,5,6,7},
+				{11,22,33,44},
+				{111,222,333,444,555,666,777,888,999}
+				};
+		
+		for(int i=0;i<marks.length;i++)
+		{
+			for(int j=0;j<marks[i].length;j++)
+			{
+				System.out.printf("Element at i=%d\tj=%d is %d\n",i,j,marks[i][j]);
+			}
+		}
+	}
+
+}

@@ -671,3 +671,188 @@ java.util.concurrent.TimeoutException
 !MESSAGE executing callback sts4.classpath.DQCAHyVA SUCCESS [done]
 =======
 >>>>>>> origin/jag
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-13 18:00:37.694
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.DQCAHyVA
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-13 18:00:37.797
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.DQCAHyVA
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-13 18:00:37.805
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-13 18:00:37.805
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.DQCAHyVA => OK
+!SESSION 2022-12-14 09:08:37.265 -----------------------------------------------
+eclipse.buildId=4.3.1.201907120711-RELEASE
+java.version=1.8.0_281
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.egit.core 1 0 2022-12-14 09:08:57.551
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2022-12-14 09:09:01.401
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-12-14 09:09:01.401
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2ba318c2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@231d3ce,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-12-14 09:09:12.271
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\rjaga'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:12.429
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:12.429
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@4b643d72[org.springframework.tooling.boot.ls:1.9.0.201907120625(id=624)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:12.475
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:13.197
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-12-14 09:09:28.284
+!MESSAGE C:\Program Files\Git\etc\.probe-bfe50f30-cb26-43d4-bc27-3aea20939d6f
+!STACK 0
+java.nio.file.AccessDeniedException: C:\Program Files\Git\etc\.probe-bfe50f30-cb26-43d4-bc27-3aea20939d6f
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(Unknown Source)
+	at java.nio.file.Files.newByteChannel(Unknown Source)
+	at java.nio.file.Files.createFile(Unknown Source)
+	at org.eclipse.jgit.util.FS$FileStoreAttributeCache.<init>(FS.java:234)
+	at org.eclipse.jgit.util.FS$FileStoreAttributeCache.getFsTimestampResolution(FS.java:211)
+	at org.eclipse.jgit.util.FS.getFsTimerResolution(FS.java:321)
+	at org.eclipse.jgit.internal.storage.file.FileSnapshot.<init>(FileSnapshot.java:186)
+	at org.eclipse.jgit.internal.storage.file.FileSnapshot.save(FileSnapshot.java:122)
+	at org.eclipse.jgit.storage.file.FileBasedConfig.load(FileBasedConfig.java:156)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.loadSystemConfig(FileRepository.java:245)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.<init>(FileRepository.java:203)
+	at org.eclipse.jgit.storage.file.FileRepositoryBuilder.build(FileRepositoryBuilder.java:88)
+	at org.eclipse.jgit.storage.file.FileRepositoryBuilder.create(FileRepositoryBuilder.java:108)
+	at org.eclipse.egit.core.RepositoryCache.lookupRepository(RepositoryCache.java:58)
+	at org.eclipse.egit.core.project.GitProjectData.map(GitProjectData.java:693)
+	at org.eclipse.egit.core.project.GitProjectData.remapAll(GitProjectData.java:651)
+	at org.eclipse.egit.core.project.GitProjectData.setRepositoryMappings(GitProjectData.java:465)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.connectProject(ConnectProviderOperation.java:153)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.execute(ConnectProviderOperation.java:111)
+	at org.eclipse.egit.core.internal.job.JobUtil$1.run(JobUtil.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui 2 2 2022-12-14 09:09:31.275
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:48.526
+!MESSAGE Boot LS startup time from start to initialized: 1437ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.012
+!MESSAGE Boot LS startup time from start to initialized: 1924ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.044
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ynRuwbekisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.044
+!MESSAGE subscribing to classpath changes: sts4.classpath.ynRuwbek isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.059
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.061
+!MESSAGE subsribers = {sts4.classpath.ynRuwbek=Send Classpath Notifications(78)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.061
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.063
+!MESSAGE project dec-14-arrays-1 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.063
+!MESSAGE project dec-13-1 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.064
+!MESSAGE Preparing classpath changed notification dec-14-arrays-1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.064
+!MESSAGE project dec-13-challenge-1 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.064
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.064
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.065
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ynRuwbek => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.067
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.068
+!MESSAGE buffering callback sts4.classpath.ynRuwbek dec-14-arrays-1 false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.095
+!MESSAGE Preparing classpath changed notification dec-13-1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.095
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.096
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.097
+!MESSAGE buffering callback sts4.classpath.ynRuwbek dec-13-1 false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.097
+!MESSAGE Preparing classpath changed notification dec-13-challenge-1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.097
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.098
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.099
+!MESSAGE buffering callback sts4.classpath.ynRuwbek dec-13-challenge-1 false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.100
+!MESSAGE executing callback sts4.classpath.ynRuwbek 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-14 09:09:49.196
+!MESSAGE executing callback sts4.classpath.ynRuwbek SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 4 0 2022-12-14 09:22:25.521
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.hover.LSBasedHover.getHoverInfo(LSBasedHover.java:108)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:43)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:167)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
