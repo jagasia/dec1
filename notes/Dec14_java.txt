@@ -97,3 +97,20 @@ public class TwoDimensionalArray {
 	}
 
 }
+
+
+
+int x;		variable x is created. creation of a primitive variable is complete.
+x=20;
+
+Date today=new Date();
+
+Date dt;		//this is not complete. We have create a reference variable called dt.	
+dt=new Date();	//an object of type Date is being created and its reference is kept in the variable dt.
+
+
+
+
+
+
+
