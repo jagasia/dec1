@@ -34,7 +34,7 @@ public class Tower {
 				}
 			}
 		}
-
+		//loop the city elements and count the zeros
 		int zeroCount=0;
 		for(int i=0;i<cityLength;i++)
 		{
@@ -55,7 +55,7 @@ public class Tower {
 		else
 		{
 			System.out.println("No");
-			System.out.println(zeroCount);
+			System.out.println();
 		}
 	}
 

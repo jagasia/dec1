@@ -251,3 +251,114 @@ public class Tower {
 	}
 
 }
+------------------------------------------
+•	Classes and Objects
+
+Naming conventions for creating a class in java:
+1) class name must be a noun
+2) start with capital letter
+	PascalCase		every word first letter in upper case
+
+
+A class can contain
+	variables
+	constants
+	methods	(functions)
+	constructors	
+	
+A class contains
+	non public data members
+
+non public means
+	private
+	default		no access specifier mentioned
+		int id;
+	protected
+
+Access specifiers:
+	public		full access		anywhere
+	protected		access to same package or derived/sub class
+	default		same package
+	private		only within the class
+
+
+
+property:
+	what is a property in Java?
+	any non public variable that has
+		public getter or setter or both
+
+
+Constructor
+---------------
+	is a special method
+	same name as class name
+	no return type
+	can take arguments also
+	can be overloaded
+	
+
+
+Date
+-------
+belongs to java.util
+
+1) How to convert a String into a Date
+2) How to convert a Date into a String	(so that it will be in the required format)
+
+
+1) How to convert a String into a Date
+	SimpleDateFormat sdf=new SimpleDateFormat("dd-MM-yyyy");
+	i) parse()		converts String into Date
+	ii) format()		converts Date into String
+
+
+
+dd	2 digit date format		01
+MM	22 digit month format		12		
+MMM	short month string		Dec
+MMMM	full month string		December
+yy	2 digit year			22
+yyyy	full year			2022
+EEE				Wed
+EEEE				Wednesday
+HH
+hh
+mm
+ss
+am
+
+
+
+
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+public class DateDemo1 {
+
+	public static void main(String[] args) throws ParseException  {
+		Scanner sc=new Scanner(System.in);
+		String input=sc.next();
+//		System.out.println(input);
+		Date dt=new Date();
+		
+		SimpleDateFormat sdf=new SimpleDateFormat("dd-MMM-yyyy");
+		dt=sdf.parse(input);
+		
+		System.out.println(dt);
+		
+		//convert dt(Date) into string in a format		yyyy-MM-dd
+		
+		SimpleDateFormat sdf2=new SimpleDateFormat("yyyy-MM-dd");
+		System.out.println(sdf2.format(dt));
+		
+		
+	}
+
+}
+
+
+
