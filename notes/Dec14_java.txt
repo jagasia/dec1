@@ -108,9 +108,146 @@ Date today=new Date();
 Date dt;		//this is not complete. We have create a reference variable called dt.	
 dt=new Date();	//an object of type Date is being created and its reference is kept in the variable dt.
 
+Square and Tower
+In a city, there are N mobile signal towers. Raj is creating an application to visualize the coverage area of the signal towers.
+        For simplicity, the following are assumed: 
+1) the shape of the city is square. 
+2) the signal coverage is in the form of a square. 
+3) the side length of the signal coverage is 3 meters.
+        Given side length of the city, number of towers, and coordinates of towers, find whether whole city is under coverage.  If the whole city is not under signal coverage, find how much area is not under coverage. 
+
+Assume that the two of the end of points of the city are  (0,0) and (n-1,n-1). 
+Input Format: 
+First input corresponds to n, length of the city. 
+Second input corresponds to the number of towers, t. 
+The next n lines of the input follow the following format: x and y coordinates of each tower, respectively. 
+
+Consider that tower is always placed at valid position. 
+
+Output Format: 
+Print "Yes" if the whole city is under coverage. Else, print "No", along with the left out area. 
+
+Sample Input 1: 
+5
+3
+2 2
+0 1
+4 1 
+
+Sample output 1:
+No
+8 
+
+Sample Input 2: 
+3 
+1 
+1 1 
+Sample Output 2: 
+Yes 
+
+
+Explanation for sample 1: 
+4	 	T3	 	 	 
+3	 	 	 	 	 
+2	 	 	T1	 	 
+1	 	 	 	 	 
+0	 	T2	 	 	 
+ 	0	1	2	3	4
+Green colour indicates the coverage area. 
+Red colour indicates the area which is not under coverage. 
+Total red area = 8. 
+ 
+
+
+------Steps--------
+1) get input from the user:	cityLength
+	create an array called city
+		int city[][]=new int[cityLength][cityLength];
+	
+2) get input: noOfTowers
+	int noOfTowers;
+
+	create an array of towers
+		int tower[][]=new int[noOfTowers][2];
+
+3) loop for the number of towers and get 
+	x & y input from the user
+
+
+4) now that you got the x, y coordinates of towers,
+	in city array, you set "1" in those areas
+
+	you set 1 in not only the tower location but also in their adjacent locations
+
+5) now check the city array, if any 0s are found. If not then coverage is "Yes". There 0s are found, then coverage is No and then display the number of 0s
 
 
 
 
 
 
+
+Solution:
+----------
+import java.util.Scanner;
+
+public class Tower {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int cityLength=sc.nextInt();
+		int city[][]=new int[cityLength][cityLength];
+		int noOfTowers=sc.nextInt();
+		int towers[][]=new int[noOfTowers][2];
+		for(int i=0;i<noOfTowers;i++)
+		{
+			int x=sc.nextInt();
+			int y=sc.nextInt();
+			towers[i][0]=x;
+			towers[i][1]=y;
+		}
+		
+		//if there is one tower at 2,2 then
+//		city[2][2]=1;
+		for(int i=0;i<noOfTowers;i++)
+		{
+			int x=towers[i][0];
+			int y=towers[i][1];	
+			
+//			city[x][y]=1;		//signal is there at tower location
+			for(int a=-1;a<=1;a++)
+			{
+				for(int b=-1;b<=1;b++)
+				{
+					if(x+a<0 || x+a>=cityLength ||y+a<0 || y+a>=cityLength)
+						continue;
+					city[x+a][y+b]=1;
+				}
+			}
+		}
+
+		int zeroCount=0;
+		for(int i=0;i<cityLength;i++)
+		{
+			for(int j=0;j<cityLength;j++)
+			{
+//				System.out.print(city[i][j]+"\t");
+				if(city[i][j]==0)
+				{
+					zeroCount++;
+				}
+			}
+//			System.out.println();
+		}
+		if(zeroCount==0)
+		{
+			System.out.println("Yes");
+		}
+		else
+		{
+			System.out.println("No");
+			System.out.println(zeroCount);
+		}
+	}
+
+}
