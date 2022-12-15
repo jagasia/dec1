@@ -239,3 +239,76 @@ Task:
 	add few country names
 
 	display all elements of array list using different methods
+
+
+
+Problem:
+	when i loop a collection
+	and inside the loop, 
+	if i remove an element of the collection,
+	i face error
+		ConcurrentModificationException
+
+
+Iterator
+	is used to traverse each element of a collection
+
+	hasNext()		returns true when there is any more element to traverse
+	next()		consumes an element and returns the same
+	remove()		removes the current element
+
+
+
+We used array list and now we can use LinkedList
+	in LinkedList, we don't have index
+		list.get(0)		//not possible
+we can traverse a linked list using iterator or for each loop		(but not using for loop. because there is no index)
+
+we can traverse a linked list in reverse order using
+	ListIterator
+		instead of iterator
+		can work only for List (does not work for Set)
+		
+methods of ListIterator
+	hasNext()
+	next()
+	remove()
+	
+	hasPrevious()
+	previous()
+
+
+
+
+public List<String> reverse(ArrayList<String> source)
+{
+	//reverse the source list and return
+	ArrayList<String> result=new ArrayList<>();
+	ListIterator<String> it=source.listIterator();
+	while(it.hasNext())
+	{
+		it.next();
+	}
+	//reverse
+	while(it.hasPrevious())
+	{
+		String s=it.previous();
+		result.add(s);
+	}
+	return result;
+}
+
+
+
+--------------------------
+TasK:
+-------
+	Java Mock 11 Req 2:
+		createCollege method accepts csv and returns object of College
+		split by ,
+		addCollegeToUniversity
+		removeCollege
+		displayColleges
+
+
+
