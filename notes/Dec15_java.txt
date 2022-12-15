@@ -312,3 +312,13 @@ TasK:
 
 
 
+public University()
+{
+	this.collegeList=new ArrayList<>();	
+}
+
+public University(String name, List<College> collegeList)
+{
+	this.name=name;
+	this.collegeList=collegeList;
+}

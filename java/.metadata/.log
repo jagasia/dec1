@@ -1712,3 +1712,135 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 10:27:13.702
 !MESSAGE executing callback sts4.classpath.qPppDiva SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:19:59.796
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.qPppDiva
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:19:59.798
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.qPppDiva
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:19:59.800
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:19:59.813
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.qPppDiva => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.596
+!MESSAGE Boot LS startup time from start to initialized: 3293ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.608
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.JzDKNECyisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.695
+!MESSAGE subscribing to classpath changes: sts4.classpath.JzDKNECy isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.724
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.725
+!MESSAGE subsribers = {sts4.classpath.JzDKNECy=Send Classpath Notifications(2223)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.726
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.727
+!MESSAGE project mock-11 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.727
+!MESSAGE project dec-13-1 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.727
+!MESSAGE Preparing classpath changed notification mock-11
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.728
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.728
+!MESSAGE project dec-13-challenge-1 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.728
+!MESSAGE project dec-14-arrays-1 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.729
+!MESSAGE project dec-15-equals-demo ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.729
+!MESSAGE project dec-15-list ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.729
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.729
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.JzDKNECy => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.731
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.752
+!MESSAGE buffering callback sts4.classpath.JzDKNECy mock-11 false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.752
+!MESSAGE Preparing classpath changed notification dec-13-1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.753
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.754
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.755
+!MESSAGE buffering callback sts4.classpath.JzDKNECy dec-13-1 false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.756
+!MESSAGE Preparing classpath changed notification dec-13-challenge-1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.756
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.757
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.758
+!MESSAGE buffering callback sts4.classpath.JzDKNECy dec-13-challenge-1 false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.758
+!MESSAGE Preparing classpath changed notification dec-14-arrays-1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.759
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.760
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.789
+!MESSAGE buffering callback sts4.classpath.JzDKNECy dec-14-arrays-1 false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.790
+!MESSAGE Preparing classpath changed notification dec-15-equals-demo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.790
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.792
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.792
+!MESSAGE buffering callback sts4.classpath.JzDKNECy dec-15-equals-demo false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.792
+!MESSAGE Preparing classpath changed notification dec-15-list
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.793
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.794
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.795
+!MESSAGE buffering callback sts4.classpath.JzDKNECy dec-15-list false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.795
+!MESSAGE executing callback sts4.classpath.JzDKNECy 6 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-15 12:20:24.826
+!MESSAGE executing callback sts4.classpath.JzDKNECy SUCCESS [done]
