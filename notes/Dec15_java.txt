@@ -40,3 +40,55 @@ e1.equals(e2)
 
 
 
+Hint:
+	you can check if 2 dates are equal or not using equals method
+		dt1.equals(dt2)
+
+TasK:
+	Java Mock 11 Req 1
+		point #6	override the equals method
+
+	Override the equals method and paste the method code alone in chat
+
+
+
+What is the difference between
+	nextLine()	use only newline delimiter
+	next()	use any delimiter		space / tab / newline
+
+
+while user enters input
+
+
+india is our country
+
+	the entire line is captured as a String (when you use nextLine())
+	india is captured by next() method
+
+
+
+Whenever you use nextLine method after a
+	next() or
+	nextInt() or
+	nextFloat() or
+	any other methods, you will face a problem
+
+
+
+
+
+IIT Madras,www.iitm.ac.in,7845612390,iit,16,Madras,15-12-1959
+	we can split this String into multiple Strings 
+		
+
+
+
+Integer.parseInt("12");		returns an int
+Integer.valueOf("12");		returns an Integer
+
+
+
+equalsIgnoreCase()	checks if both are equal, ignoring the case
+
+
+
