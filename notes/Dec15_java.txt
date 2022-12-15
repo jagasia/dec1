@@ -746,3 +746,9 @@ public class Main {
 	}
 
 }
+
+----------------------
+TasK:
+	Java_Mock_29_NoPrefill	Req # 5
+	use Comparable and Comparator to solve this requirement.
+
