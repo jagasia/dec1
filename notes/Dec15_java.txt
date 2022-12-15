@@ -322,3 +322,47 @@ public University(String name, List<College> collegeList)
 	this.name=name;
 	this.collegeList=collegeList;
 }
+https://github.com/jagasia/dec1/tree/jag2/java/mock-11/src
+
+------------------------------------------
+Once you have learned List
+	ArrayList
+	LinkedList
+
+	legacy class	(synchronized)
+		Vector
+		Hashtable
+
+Set
+	Classes that implement the Set interface
+		HashSet
+		TreeSet
+		LinkedHashSet
+
+Set does not allow duplicates. Then what happens if we try to add duplicates?
+	will it give error?	NO	
+		No errors, but that attempt to add duplicate is rejected.
+
+
+
+Whenever you create a HashSet of any type, that type class must override
+	hashCode
+	equals method
+
+HashSet<Integer>
+	Integer class already implements equals and override methods
+
+	check
+		ctrl+shift+code
+
+
+Hashing
+	allow us to search fast	
+	while adding elements, they are added in particular location based on their hashCode
+	later, to find elements, their hashCode is used to find fast
+
+TasK:
+	Java Mock 11
+	Req #4
+
+	practice task for ArrayList
