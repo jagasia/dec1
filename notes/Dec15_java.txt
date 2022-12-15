@@ -1,0 +1,42 @@
+Plan for the day
+--------------------
+overriding equals method
+Collections
+String
+Exception
+
+
+
+We discussed about 
+	==
+	equals()
+
+What is the difference between the above two?
+	== compares references (when the operands are ref types)
+	equals method compares the values
+
+a and b are objects	(ref types)
+a==b	checks if their references are same
+a.equals	checks if their values are same
+
+Integer
+Float
+Double
+
+Employee
+	id
+	name
+	salary
+
+Employee e1=new Employee(1,"Raja",123456); 
+Employee e2=new Employee(1,"Raja",123456);
+
+e1==e2	
+	what will be result?
+		false
+
+e1.equals(e2)
+	clarify whether Employee class has overridden the equals method or not?
+
+
+
