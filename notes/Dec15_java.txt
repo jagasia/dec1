@@ -91,4 +91,151 @@ Integer.valueOf("12");		returns an Integer
 equalsIgnoreCase()	checks if both are equal, ignoring the case
 
 
+TasK:
+	accept a string input and parse it into an object
+	check if those objects are equal or not
 
+-----------------------------------------------------------
+Collections
+---------------
+	how collections are different from arrays?
+	1) Arrays are fixed length
+	2) Size of arrays must be known when we create arrays
+	
+Collections in java, belongs to 
+	java.util package
+
+What are the collection classes we learn?
+
+List	(interface)
+	ArrayList		
+	LinkedList		
+Set
+	HashSet
+	TreeSet
+	LinkedHashSet
+Map
+	HashMap
+	TreeMap
+	LinkedHashMap
+
+
+
+Difference between List and Set?
+1) List allows duplicates. Set does not allow duplicates		(Set is a collection of distinct objects)
+2) List is ordered. Order is not asc or desc order. It is the order in which the elements are added.
+	All lists are ordered.
+	What about Set??????????		people say Set is unordered
+		Every type of set has a particular order. (Need not be the order in which they are added)
+		HashSet	- The order is based on hasCode() method
+		TreeSet	- The order is sorted manner	based on Comparator / Comparable
+		LinkedHashSet	-	Orderd	(similar to List)
+3) List can be sorted (even after adding elements)
+	Collections.sort(list);	
+	Set does not allow us to re-arrange elements after added. 
+	TreeSet maintains sorted order. But while adding elements, the elements are placed in correct locations while adding.
+		later, rearranging is not possible
+		you may convert the set into a list and sort it again
+	
+4) Traversing a list can be done from last to first is possible. 	Set do not have this.
+
+list.add(10);
+list.add(20);
+list.add(10);
+list.add(5);
+list.add(30);
+
+set.add(10);
+set.add(20);
+set.add(10);		//duplicate.		Rejected
+set.add(5);
+set.add(30);
+
+
+What is the difference betwen Array and Collection?
+	arrays can be primitives also
+	int []arr=new int[10];	//possible
+but, collections are always objects
+
+	ArrayList<Integer> list=new ArrayList<>();	//possible
+		remember ArrayList<int> is NOT possible
+
+
+
+
+
+
+import java.util.ArrayList;
+
+public class Main1 {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> marks=new ArrayList<>();
+		marks.add(90);
+		marks.add(50);
+		marks.add(40);
+		marks.add(50);
+		marks.add(80);
+		marks.add(90);
+		marks.add(100);
+		marks.add(45);
+		marks.add(76);
+		
+		System.out.println(marks);
+	}
+
+}
+
+Output:
+[90, 50, 40, 50, 80, 90, 100, 45, 76]
+
+
+observation:
+1) duplicates were allowed
+2) order is same as added
+
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Main1 {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> marks=new ArrayList<>();
+		marks.add(90);
+		marks.add(50);
+		marks.add(40);
+		marks.add(50);
+		marks.add(80);
+		marks.add(90);
+		marks.add(100);
+		marks.add(45);
+		marks.add(76);
+		
+//		System.out.println(marks);
+		
+//		for(int i=0;i<marks.size();i++)
+//		{
+//			//Vector and ArrayList only have index
+//			System.out.println(marks.get(i));
+//		}
+		
+//		for(Integer x:marks)
+//			System.out.println(x);
+		
+//		Iterator<Integer> it = marks.iterator();
+//		while(it.hasNext())
+//		{
+//			Integer x = it.next();
+//			System.out.println(x);
+//		}
+	}
+
+}
+
+Task:
+------
+	Create an arraylist of String type and 
+	add few country names
+
+	display all elements of array list using different methods
