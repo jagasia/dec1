@@ -81,21 +81,16 @@ public class Mobile {
 		
 		return mobile;
 	}
-	public static Map<Date,Integer> yearWiseCount(List<Mobile> mobileList)
+	public static Map<Date,Integer> yearWiseCount(List<Mobile> mobileList) throws ParseException
 	{
 		Map<Date,Integer> result=new TreeMap<Date, Integer>();
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyy");
-		
+
 		for(Mobile mobile:mobileList)
 		{
 			Date date=mobile.getLaunchedDate();
 			String year=sdf.format(date);
-			try {
-				date=sdf.parse(year);
-			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			date=sdf.parse(year);
 			//now check if this date is found in the map or not
 			Integer count = result.get(date);
 			if(count==null)

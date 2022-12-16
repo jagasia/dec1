@@ -220,3 +220,154 @@ public class DistinctTask
 ArrayList input
 
 
+------------------------------------
+Exception Handling
+--------------------------
+Handling of errors
+Runtime errors
+
+Errors vs Exceptions
+
+Errors cannot be handled
+Error means, terminate the program
+
+Exceptions can be handled
+	means, in response to the exception, the program can continue in an alternate path.
+
+
+What is Exception?
+	are defined abnormal events
+	every exception in java, is defined as a class
+		A class that is derived from Exception (or) RuntimeException (or) any of their sub classes, are called 		exception class
+
+	If a class is derived from Exception class or any of its sub class, then it is a checked exception
+	If a class is derived from RuntimeException clalss, or any of its sub class, then it is unchecked exception
+
+What is checked exception?
+	compile checks these exceptions
+	and the program does not compile unless they
+		handle these exceptions (or)		using try-catch-finally blocks
+		declare these exceptions		throws clause
+
+
+Exampe for checked exception:
+	IOException
+	
+
+throws
+	is used to inform the compiler that this method throws these exceptions but does not handle.
+	the calling method can handle the exception
+
+
+Unchecked exception
+	are not checked by the compiler
+	they can be handled or left unhandled
+	they need not be declared using throws
+
+
+throw
+	is used to throw an object of exception class
+throws
+	is used to declare that the method throws these exceptions and does not handle them but calling method to handle
+
+try
+catch
+finally
+
+try block
+	is called as guarded section
+	exceptions occurred in this block can be handled by 1 or more catch blocks
+
+catch block
+	is executed when exception occurred
+	there can be many catch blocks for a try block
+	there can be 0 or more catch blocks for a try block
+
+
+Can we have try block without catch?
+
+
+A try block must be followed by a catch or finally or both
+
+try
+{
+}
+finally
+{}
+
+
+try{}
+catch{}
+
+
+
+try{}
+catch{}
+finally{}
+
+
+try{}
+catch{}
+catch{}
+catch{}
+finally{}
+
+
+try{}
+catch{}
+catch{}
+catch{}
+
+Observations:
+	try block alone is not possible
+	catch should be below try block only
+	finally comes only at the end. And only once.
+	between try and catch and finally,  nothing else should be there
+
+	
+Activity:
+	Identify few
+		checked exceptions
+		unchecked exceptions
+
+Checked Exceptions:
+	ClassNotFoundException
+	NoSuchMethodException
+	IOException
+	FileNotFoundException
+	SQLException
+	ParseException
+
+Unchecked Exceptions:
+	ArrayIndexOutOfBoundsException
+	ArithmeticException
+	NullPointerException
+	NumberFormatExeption
+	IllegalArgumentException
+
+
+Where to declare "throws"
+and where to handle exceptions.
+
+There are some classes, where we have methods that are meant to be called by other layers of the project
+ex:
+	DAO
+	BO
+	API
+
+these classes contain lot of methods that are used by other layers
+these are used by different type of front end applications
+
+so the way you handle exception is different, so they are left to the calling methods
+so in these library methods, we always throw exceptions and declare as throws and not handle.
+
+Handling exceptions are mostly done at front end.
+	main method (in case of java projects) is the front end
+
+
+
+How to create our own exception classes?
+	user defined exception class
+A class that extends Exception class is user defined checked exception class
+A class that extends RuntimeException class is user defined unchecked exception class
+
