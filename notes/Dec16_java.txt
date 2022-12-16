@@ -1,0 +1,170 @@
+Plan for the day
+--------------------
+Collections	- Map	we will learn this now
+String
+Exception
+
+
+Map
+-------
+key - value pair
+
+ex:
+	1 - India
+	2 - Australia	
+	3 - Japan
+
+
+
+ex:
+	121	Raja
+	122	Abdul
+	123	Suresh
+
+
+List
+Set
+	these are collections
+
+Map is not a collection but, an application of collections
+
+Map classes:
+------------------
+HashMap
+TreeMap
+LinkedHashMap
+
+
+Entry
+	key
+	value
+
+HashMap<Integer, String> countryMap=new HashMap<>();
+
+
+methods of Map:
+----------------------
+	put		adds an entry to the map	put(1,"India");
+	get		gets the value based on key	get(1);			//returns "India"
+
+			get(-1)		returns null		because, the key is not found in the map
+
+
+
+
+
+import java.util.HashMap;
+import java.util.Map.Entry;
+
+public class Main {
+
+	public static void main(String[] args) {
+		HashMap<Integer, String> countryMap=new HashMap<>();
+		countryMap.put(1,"India");
+		countryMap.put(2,"Australia");
+		countryMap.put(3,"Japan");
+		countryMap.put(4,"China");
+		countryMap.put(5,"Sri lanka");
+		countryMap.put(6,"Germany");
+		countryMap.put(7,"France");
+		countryMap.put(8,"England");
+		countryMap.put(9,"Argentina");
+		countryMap.put(10,"Brazil");
+		
+		//added 10 entries into the map
+		
+		//how to display all the entries
+		//1) using for each loop
+		
+		for(Entry<Integer, String> entry:countryMap.entrySet())
+		{
+			System.out.println(entry.getKey()+"\t"+entry.getValue());
+		}
+	}
+
+}
+
+
+
+///////
+//		2) using keys
+		Set<Integer> keys = countryMap.keySet();
+//		System.out.println(keys);
+		for(Integer key:keys)
+		{
+			System.out.println(key+"\t"+countryMap.get(key));
+		}
+
+Points to remember about Maps:
+-------------------------------------------
+key value  pair
+
+Key
+	is a Set	(means, no duplicates)
+	can we assign null for a key????????
+		yes. But only 1 null. why?	
+			because, another null is considered as duplicate
+
+	Ok, if i put a duplicate key, what happens?
+
+
+
+
+if the key was found, then update it.
+
+
+Key is a Set
+	which set?
+		HashSet????	or	TreeSet????		or LinkedHashSet????
+	It is based on which Map it is?
+		If the map is 
+			HashMap, then the key is a HashSet
+			TreeMap, then the key is a TreeSet
+			LinkedHashMap, then the key is LinkedHashSet
+
+
+
+
+
+put 
+	is used to add a new entry
+	is used to update an existing entry
+
+	put(1,"India");		// 1 is not found yet, so it is added as a new entry
+	put(1,"Bharath");		// 1 is already found in the keys, so it is updating the value
+
+
+
+get
+	accepts the key as argument
+		returns the value
+	if the key is not found, 
+		returns null
+
+
+
+	static Map<String,Integer> calculateLocationCount(List<College> list)
+	{
+		Map<String,Integer> result=new TreeMap<>();
+		//loop the list of colleges and check their location
+		for(College college:list)
+		{
+			String location=college.getLocation();
+			//check if that location is already found in the map
+			Integer count = result.get(location);
+			if(count==null)
+			{
+				count=0;
+			}
+			count++;		
+			
+			result.put(location, count);
+		}
+		
+		return result;		
+	}
+
+--------------------
+Task:
+	Mock 29 Req #6	solve this using map
+
