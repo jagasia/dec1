@@ -188,3 +188,8 @@ Collections
 	sorting  in desc order
 	replacing elements in a collection
 
+
+List
+Set
+Map
+

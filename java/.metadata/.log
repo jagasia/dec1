@@ -8050,3 +8050,15 @@ java.nio.file.AccessDeniedException: C:\Program Files\Git\etc\.probe-74d19cce-a6
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-17 09:28:25.930
 !MESSAGE executing callback sts4.classpath.fOHANbFo SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-17 17:54:08.841
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.fOHANbFo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-17 17:54:08.942
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.fOHANbFo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-17 17:54:08.998
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-12-17 17:54:08.999
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.fOHANbFo => OK
