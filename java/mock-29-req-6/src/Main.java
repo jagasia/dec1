@@ -24,6 +24,8 @@ public class Main {
 		}
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyy");
 		Map<Date, Integer> result = Mobile.yearWiseCount(mobileList);
+		
+		
 		System.out.format("%-15s %s\n","Year","No. of Mobiles");
 		for(Entry<Date, Integer> entry:result.entrySet())
 		{

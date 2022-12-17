@@ -1,0 +1,190 @@
+Pattern of the assessment
+1) Collections
+	create an array list
+	check if an item is found in the list or not
+	add an element to the list
+
+	map
+		find models based on company name
+		if found, remove
+			remove is not possible using for-each loop
+				you have to use iterator and remove method
+
+			get the value based on key
+				ex:	company name is key 			
+					models arraylist is the value
+
+		in map, if you use put method
+			put(key, value)
+				if key is already found, the value is updated in the existing entry
+				if key is not found, then the new entry is added
+		
+		to find if key is already found or not,
+			if(map.containsKey(company))
+			{
+				//key is already found
+			}	
+
+
+
+		ArrayList<String> models=map.get(company);	
+		// if company is not found in the map, you will get null
+
+		if(models==null)
+		{
+			//key not found
+			//you are adding new entry to the map
+			count=0;
+		
+		}
+			count++;
+			map.put(compay,count);
+
+
+
+
+--------------------------------------------------
+String
+	split by @
+	split by ,
+
+Task:
+--------
+Get an input from the user and check if it is a valid ip address or not?
+	split by . and convert every portion into int and then check the range is between 0-255 or not
+
+
+
+TasK:
+------
+Accept a string input and display only the vowels
+
+Hint:
+	to convert a string into character array
+		Scanner sc=new Scanner(System.in);
+		String input=sc.next();
+		char []arr=input.toCharArray();
+
+	for(char c : arr)
+	{
+		switch(c)
+		{
+			case 'a':
+			case 'e':
+			case 'i':
+			case 'o':
+			case 'u':
+				System.out.println("Vowel");
+				break;
+			default:
+				System.out.println("Not vowel");
+				break;
+		}
+	}
+
+----------------------------------
+Anagram?
+
+ex:
+	tea
+	eat
+	ate
+
+		these are anagrams
+
+meat
+team
+	are anagrams
+
+two words are anagrams if they are made of same characters
+
+Task:
+
+Write a java program to check if two strings are angrams
+
+
+
+e.g: 
+amit@doselect.com
+
+, 
+
+_ami@doselect.in
+
+ are valid addresses, but 1ami@dos.com, amit@doselect are invalid addresses.
+
+
+
+abcd
+
+char + 3
+
+
+a+3	=d
+z+3	=c
+y+3	=b
+
+a=97
+b=97+1
+z=97+26
+
+a=97
+a=97+0
+z=97+25
+
+122
+
+0 - 25
+
+1) check if the character ascii is between 97 - 122
+	//it is lower case alphabet
+
+	acii+3 modulo 122
+
+	a
+		97 + 3 = 100%122	=	100 only	NO problems
+	y	121+3=124%122	=	2	97+2-1	=99	c
+
+	y becomes c		is it ok?
+
+97, 98, 99, ....122
+
+123 - 26	= 	97
+
+
+expected 0.6	but it was 0
+
+
+
+
+
+public String calcGST(Receipt r)
+    {
+      String productsQR=r.productsQR;
+      //split the string by @ symbol
+      String []arr=productsQR.split("@");
+      Integer amount=0;
+      for(int i=0;i<arr.length;i++)
+      {
+        String []arr1=arr[i].split(",");
+        int rate=Integer.parseInt(arr1[0]);
+        int quantity=Integer.parseInt(arr1[1]);
+        amount+=(rate*quantity);
+      }
+      amount=amount*12/100;
+      return amount.toString();    
+    }
+}
+
+------------------------------------------
+Collections
+	adding elements
+	traversing or iterating or visiting the elements
+	displaying all elements
+	removing an element from the collection
+	searching an element from the collection
+	reversing
+	sorting
+	sorting  in desc order
+	replacing elements in a collection
+

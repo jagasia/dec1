@@ -371,3 +371,70 @@ How to create our own exception classes?
 A class that extends Exception class is user defined checked exception class
 A class that extends RuntimeException class is user defined unchecked exception class
 
+Try the exception problems uploaded now.
+
+
+1) create an userdefined exception class
+	skeleton already given 
+		public class NotEligibleException extends Exception
+		{		
+
+			//we need to create the constructor
+			public NotEligibleException(String message)
+			{
+				super(message);
+			}
+		}
+
+2) whenever you throw an object of (user defined) exception (if that exception is a checked exception)
+	declare the method with "throws clause"
+
+3) When you handle the exception in catch block, getMessage()
+			try{
+				return CompanyJobRepository.getJobPrediction(age, highestQualification);
+			}catch(NotEligibleException nee)
+			{
+				return nee.getMessage();
+			}
+
+
+
+
+Activity:
+All of you start practice test for 
+	Q1
+	then
+	Q3
+
+
+
+
+group by
+
+Mobiles
+	company
+	list of models
+
+
+the output
+	company	count
+	samsung	10
+	nokia	5
+	redmi	12
+
+
+<String, ArrayList<String>>
+
+for(Entry<String,ArrayList<String>> entry:mobiles.entrySet)
+{
+	String company=entry.getKey();
+	Integer count=entry.getValue().size();
+}
+
+
+
+SELECT
+	order by
+
+Collections.sort
+
