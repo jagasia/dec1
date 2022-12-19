@@ -1,0 +1,309 @@
+Java concepts
+-------------------
+OOPS
+	Inheritance
+	Abstraction
+	Encapsulation
+	Polymorphism
+Lambda & Streams
+IO
+Threads
+Packages
+Layered architecture
+
+
+--------------------------------
+Packages
+------------
+	collections of classes
+	group of classes
+	organise classes 
+
+If class can be compared to a file
+then package can be compared to a folder
+
+
+a package can contain
+	classes
+	interfaces
+
+package model;
+
+public class Department
+{
+}
+
+TO COMPILE:
+	javac -d . Department.java
+
+	-d creates a directory
+	. means current location
+
+
+packages are introduced for access control
+
+
+class Department
+{
+	int id;			
+	String name;
+}
+
+
+id and name are not declared as private or public
+they have default access	(means, within the package)
+
+There are 4 access specifiers:
+public
+protected
+default
+private
+
+
+another Employee
+
+in Employee class there is a method
+
+	void doSelect()
+	{	
+		Department d=new Department();
+		d.id=20;		// i am able to access the id 	Both classes are in same package	
+	}
+
+
+
+Packages solve name collision
+
+Can you create a class called String
+	Yes. we can create a class called String
+	because, String belongs to java.lang package.	But When i create a String class, then it belongs my package
+
+
+java.lang.String
+String
+
+
+Data Layer
+	defines data
+	access data
+
+model
+view
+controller
+
+Lambda
+-------------
+	is used for quick implementation of functional interfaces
+
+What is a functional interface?
+	an interface that contains only 1 abstract method
+
+
+Java 8 version
+	interfaces can have methods with body, if they are static / default methods
+
+
+Runnable		run()
+Comparable	compareTo()
+Comparator	compare()
+
+Whenever we need implementation of these functional interfaces, we can use lambda
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+class MyComparator implements Comparator<Integer>
+{
+
+	@Override
+	public int compare(Integer a, Integer b) {
+		// TODO Auto-generated method stub
+		return b-a;
+	}
+	
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> marks=new ArrayList<>();
+		marks.add(50);
+		marks.add(70);
+		marks.add(60);
+		marks.add(30);
+		marks.add(90);
+		marks.add(100);
+		marks.add(95);
+		marks.add(85);
+		marks.add(75);
+		
+//		Collections.sort(marks, new MyComparator());
+		Collections.sort(marks,(a,b)->b-a);
+//		Collections.reverse(marks);
+		System.out.println(marks);
+
+	}
+
+}
+
+
+------------------------------------
+
+public class Employee {
+	int id;
+	String name;
+	String department;
+	double salary;
+	
+	public Employee() {}
+
+	public Employee(int id, String name, String department, double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.department = department;
+		this.salary = salary;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", department=" + department + ", salary=" + salary + "]";
+	}
+	
+}
+
+---------------
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		List<Employee> empList=new ArrayList<Employee>();
+		empList.add(new Employee(12, "Raja", "IT", 121212.0));
+		empList.add(new Employee(1, "Abdul", "ECE", 12212.0));
+		empList.add(new Employee(112, "Dinesh", "IT", 11212.0));
+		empList.add(new Employee(15, "Prasad", "IT", 121212.0));
+		empList.add(new Employee(21, "Krishna", "CSE", 1521212.0));
+		empList.add(new Employee(52, "Sathish", "ECE", 1215212.0));
+		empList.add(new Employee(32, "Dinesh", "CSE", 1212152.0));
+		empList.add(new Employee(18, "Raja", "CSE", 521212.0));
+		
+		Collections.sort(empList, (a,b)->a.getName().compareTo(b.getName()));
+		
+		for(Employee e:empList)
+			System.out.println(e);
+	}
+
+}
+
+
+
+-------------------------------
+
+Stream API
+------------------
+	operations on collections
+	
+
+
+Sum of salary group by department
+	ECE	
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Optional;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+//class MyPredicate implements Predicate<Employee>
+//{
+//
+//	@Override
+//	public boolean test(Employee t) {
+//		// TODO Auto-generated method stub
+//		return false;
+//	}
+//	
+//}
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		List<Employee> empList=new ArrayList<Employee>();
+		empList.add(new Employee(12, "Raja", "IT", 1.0));
+		empList.add(new Employee(1, "Abdul", "ECE", 1.0));
+		empList.add(new Employee(112, "Dinesh", "IT", 1.0));
+		empList.add(new Employee(15, "Prasad", "IT", 1.0));
+		empList.add(new Employee(21, "Krishna", "CSE", 1.0));
+		empList.add(new Employee(52, "Sathish", "ECE", 1.0));
+		empList.add(new Employee(32, "Dinesh", "CSE", 1.0));
+		empList.add(new Employee(18, "Raja", "CSE", 1.0));
+		
+//		Collections.sort(empList, (a,b)->a.getName().compareTo(b.getName()));
+		
+//		Stream<Employee> stream = empList.stream();
+//		stream=stream.sorted((a,b)->b.id-a.id);
+//		stream.forEach(System.out::println);
+
+//		Optional<Employee> result = empList.stream()
+////		.filter((a)->a.department=="IT")
+////		.filter((a)->a.name.startsWith("D"))
+//		.max((a,b)->(int)(a.getSalary()-b.getSalary()));
+//		
+//		System.out.println(result);
+//		
+		
+//		for(Employee e:empList)
+//			System.out.println(e);
+		
+		Map<String, Double> result = empList.stream()
+		.collect(Collectors.groupingBy(Employee::getDepartment, Collectors.averagingDouble(Employee::getSalary)));
+		
+		for(Entry<String, Double> entry:result.entrySet())
+			System.out.println(entry.getKey()+"\t"+entry.getValue());
+	}
+
+}
+
+
