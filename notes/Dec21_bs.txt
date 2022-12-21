@@ -44,3 +44,64 @@ Copy the code from
 https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_default&stacked=h
 
 try to add many rows of different number of columns 
+
+
+jumbotron
+grid basic
+tables
+alerts
+Buttons
+Cards
+Navbar
+Inputs
+
+
+-------------------------------
+Task:
+Create a web page that contains
+	Heading
+	Navbar	
+		use dark background
+	Form
+		use form-control and btn styles
+	Table
+		alternate rows have same style
+		move over any row, should highlight the row
+		there should be border
+	List
+
+The page should have atleast 3 columns
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://forms.gle/r4EmjhvANQLmw1329
+
+
+
+
+
+
+
+
