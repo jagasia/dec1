@@ -307,3 +307,116 @@ public class Main2 {
 }
 
 
+
+
+----------------------------------
+IO
+
+input and output operations
+	System.in
+	System.out
+
+
+Scanner sc=new Scanner(System.in);		
+
+
+
+class System
+{
+	public static InputStream in;
+	public static PrintStream out;
+}
+
+System.out.println();
+
+There are lot of classes (methods) that support various input/ output operations
+
+2 categories
+	input
+	output
+
+2 more categories
+	text
+	binary
+
+character
+String
+
+123
+	one number
+	3 numbers
+	3 characters
+	1 string
+Character 
+	Reader
+		FileReader
+		BufferedReader
+	Writer
+		FileWriter
+		BufferedWriter
+
+Binary
+	InputStream
+		FileInputStream
+		ObjectInputStream
+		BufferedInputStream
+	OutputStream
+		FileOutputStream
+		ObjectOutputStream
+		BufferedOutputStream		
+
+
+
+Download node.js from software centre
+cmd
+	node -v
+
+now, node js is installed
+	npm install -g typescript
+	tsc -v
+
+to install angular:
+	npm install -g @angular/cli
+to check installed angular version
+	ng -v version
+
+
+
+
+npm install npm@latest -g
+
+
+C:\Users\rjaga\AppData\Roaming\npm
+
+Problem:
+	tsc -v
+		is not recognized
+
+Solution:
+	C:\Users\rjaga\AppData\Roaming\npm
+
+------------------------------------------------------------------------------
+
+npm i -g typescript
+
+
+
+
+npm i -g @angular/cli
+
+
+
+
+ng version
+
+
+
+
+
+
+
+
+
+
+
+

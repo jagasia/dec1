@@ -1,0 +1,39 @@
+Bootstrap
+-------------
+	presentation
+	display
+	how it appears, looks like
+	color, font, alignment, graphics, animation/ effects
+
+<font color="red">this is a text</font>
+<p style="color:red">this is a text</p>
+
+external		bootstrap.css
+	<link href="bootstrap.css" >
+internal
+in-line
+
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+Lab setup:
+--------------
+You can use either cdn or copy of bootstrap css
+
+
+Typography
+----------------
+every html element is applied a default style by the bootstrap
+
+Grid
+-------
+by default, bootstrap sees a page as 12 columns
+
+we can create columns of any width
+	2 + 8 + 2
+	4 + 4 + 4
+
+2 + 2	
