@@ -37,3 +37,10 @@ we can create columns of any width
 	4 + 4 + 4
 
 2 + 2	
+
+Hands on:
+Copy the code from 
+
+https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_default&stacked=h
+
+try to add many rows of different number of columns 
