@@ -406,3 +406,139 @@ export class SignupComponent implements OnInit {
 }
 
 
+
+
+
+Single Page Application
+	index.html	
+		only in this file, you will have <HTML> <HEAD> <BODY> tags
+		only here, the top html elements are placed
+
+
+all other components have their part of the code only
+	those part of the code that can be plugged into app component
+
+in index.html
+	we plug the app component
+		all other components are plugged in app component
+
+----------------------------------------------------------
+Examination preparedness
+	Java practical examination preparedness
+
+Collections
+String
+Exceptions
+
+Collections
+	Map
+
+you can solve a problem using Stream api (or) manually by looping the collection
+
+
+
+
+
+6 questions
+	find if you are able to solve it
+	once you are able to solve it
+		you found some methods to solve the problem
+		find all such methods present
+		Collections.reverse()	we used to solve a problem
+			i) find all methods of Collections	ex: sort
+			ii) find ways of solving the problem without Collections.reverse()
+				list has index	size()-1 is the last index 
+			start from last index and move till >=0 index
+			this is reverse order. add elements to a result 
+				in hackerrank, this will be rejected because, unnecessary loop is used,
+				so time limit will exceed.
+			But here, we got 10 seconds time for the program to complete
+
+				
+
+
+
+Map
+	map.put(key, value);	
+		this is the same method to add new entry / update existing entry
+
+Task:
+	write a java program to accept a string input from the user and display the number of times, each character is found.
+
+sample input:
+	india is our country
+
+sample output:
+	i = 3
+	n = 2
+	d = 1
+	a = 1
+	  = 3
+	s = 1
+	o = 2
+	u = 2
+	r = 2
+	c = 1
+	t = 1
+	y = 1
+
+
+Scanner sc=new Scanner(System.in);
+String input = sc.nextLine();
+Map<Character, Integer> result=new LinkedHashMap<Character, Integer>();
+for(char c : input.toCharArray())
+{
+//	if(result.containsKey(c)
+	Integer count=result.get(c);	//checking if c is already found in the map or not. If not found, you will get null
+	
+	if(count==null)
+		count=0;
+	count++;
+	result.put(c, count);
+	
+}
+
+
+
+
+	
+1) Scanner input
+2) input is a string. in order to loop every character in a string
+	i) convert string into char array
+		char []arr=input.toCharArray();
+	ii) another way
+		for(char c : input.toCharArray())
+		{
+		}
+	iii) another way
+		for(int i=0;i<input.length;i++)
+		{
+			char c=input.charAt(i);
+		}
+
+
+
+
+
+int letterCount=0;
+
+		for(char c : input.toCharArray())
+		{
+			if(c.isLetter())
+			{
+				letterCount++;
+				if(c>='A' && c<='Z')
+					upperCount++;
+				else if(c>='a' && c<='z')
+					lowerCount++;
+			}
+			else if(c.isDigit())
+				digitCount++;
+			else
+				symbolCount++;
+		}
+
+
+
+
+
