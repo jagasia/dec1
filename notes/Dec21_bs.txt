@@ -101,6 +101,20 @@ https://forms.gle/r4EmjhvANQLmw1329
 
 
 
+1) go to cmd prompt	(nodejs command prompt)
+2) change to your project folder
+	cd D:\Jag\Capgemini\Dec1stBatch\Angular
+3) create your first angular project now:
+	ng new first-project
+		routing? y/n	y
+		css		enter
+
+4) after creating project, go inside the project folder
+	cd first-project
+5) run the project
+	ng serve -o
+6) open visual studio code
+	then open the project folder in vs code
 
 
 

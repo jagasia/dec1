@@ -1,0 +1,408 @@
+Angular
+---------
+
+1) go to cmd prompt	(nodejs command prompt)
+2) change to your project folder
+	cd D:\Jag\Capgemini\Dec1stBatch\Angular
+3) create your first angular project now:
+	ng new first-project
+		routing? y/n	y
+		css		enter
+
+4) after creating project, go inside the project folder
+	cd first-project
+5) run the project
+	ng serve -o
+6) open visual studio code
+	then open the project folder in vs code
+
+
+
+-------------------------------------------------
+Angular Js and Angular
+-------------------------------
+Angular Js was the first version
+and second version onwards, it is called as Angular
+
+2nd version of angular onwards, uses Typescript language	(of course, javascript is supported)
+
+What is typescript?
+	what is the need for a new language called typescript?
+
+Whenever a new version of javascript introduced, there was a need to upgrade the browser version.
+to solve this problem, they introduced typescript language, which can be compiled to javascript
+
+typescript compiler can translate typescript code into js code.
+
+javascript is not compiled, it is interpreted
+
+What is the last version of Javascript?
+	ES6		ECMA Script 6
+
+Typescript
+	is made on Javascript
+	means, any js code is allowed in ts
+
+	alert()
+	console.log()
+	document.getElementById()
+
+Hello world program in ts:
+1) choose a folder and create a file in that location
+	one.ts
+2) in cmd prompt (or) node.js command prompt
+	check if the file is present	dir
+	one.ts.txt?
+		rename one.ts.txt one.ts
+3) open the file in notepad
+	console.log("Hello world");
+
+4) save the file
+
+
+5) compile the ts file to get js file
+	tsc one.ts
+
+6) now we got a file
+	one.js
+
+7) to run one.js
+	node one
+
+-------------------------
+data types
+	in javascript, we do not mention the datatypes when we create variables
+	but the types are inferred from the values assigned to the variable
+
+	var x=20;		//this variable is of number data type
+	var y="raja";	//string type
+	var x;		//undefined
+	var y=null;		//null
+
+in typescript,
+	let x=20;
+	
+what is the difference between var and let?
+	var is javascript way of creating variables
+	
+var x=20;
+for(;;)
+{
+	var x=40;		//allowed
+}
+
+
+
+but if you use let, then it will not allow you to declare variable which is already declared
+
+let allows us to specify the data type.
+
+let x:number|string=20;
+let y:any;
+
+
+number
+string
+Date
+any
+Object
+
+---------------------------------------
+TasK
+Yesterday you created an angular project
+	first-project
+
+Run that project now.
+
+ng server -o
+	localhost:4200
+---------------------------------------------
+Angular 
+	ng new <<project name>> --routing --style=css
+
+Let us understand the project folder structure
+	src 
+		this folder is for us (programmers)
+
+	index.html
+		SPA	Single Page Application
+
+	module
+		app.module.ts
+		can contain many components, classes, interfaces, pipes
+		
+	component
+		by default, there is a component called "AppComponent"
+
+
+What is a component?
+	a pluggable component contains
+		html		template
+		ts		can use javascript code, and also typescript code
+		css		style
+		spec.ts		unit testing code
+
+
+for app component:
+	app.component.html
+	app.component.ts
+	app.component.spec.ts
+	app.component.css
+
+
+if we create another component
+	login component
+		ng g c login
+		ng generate component login
+
+
+employee-display
+
+the file name will always be in small letters (hyphen separated)
+in response to the command, it will create files
+	
+
+DELETE THE COMPONENT YOU CREATED
+Create the login component again.
+
+What is a component?
+	A class decorated by @Component decorator
+
+	in java, @ is used for annotation, 
+	in ts, @ is called as decorator
+	both are same in meaning
+
+
+
+Task:
+1) copy the bootstrap cdn to the <head> portion of index.html
+2) in app component html
+	put the scaffolding
+		3 columns bootstrap home page
+3) in 2nd column,
+	plug the  login component
+		<app-login></app-login>
+
+
+Task:
+create a signup component
+plug it in app component	(any column)
+
+
+Task:
+add a navbar to your page
+
+Reminder for templates:
+Reminder for pipes:
+----------------------------------------
+Binding
+-------------
+1) declare variables in .ts file
+	in class level (instance variables)
+		x:string="";	//always initialize the variable when declared
+	in function/method level	(local variables)
+		let i:number=20;
+		var j=30;
+
+2) displaying the value of variable in a html page
+	interpolation
+		{{x}}
+
+		display only purpose
+		display the value of a variable
+		display the result of an expression		{{2*3}}
+
+
+
+Task:
+	In signup component,
+	declare some instance variables and give some default value to them
+	display all these variables in html page using interpolation
+
+
+---------------------------------------
+Binding:
+	1) interpolation
+	2) property binding
+
+
+	<input type="text" value="username" />
+	<input type="text" [value]="username" />
+	<input type="text" [value]=" 'username' " />
+
+	This is called as property binding	
+		[	]
+
+
+
+
+
+
+Binding:
+	1) interpolation
+	2) property binding
+	3) event binding
+
+
+in javascript how, we handle events?
+	<input type="button" onclick="fn1()" />
+
+
+in typescript how, we handle events?
+	in .ts file, create the function		ex:		fn1()
+	int .html file, do event binding like below:
+		<input type="button" (click)="fn1()" />
+
+TasK:
+	create a function in .ts file
+	and call alert method with a dummy message
+
+	in html file, on button click, call the function
+
+Binding:
+	1) interpolation		{{}}
+	2) property binding		[]
+	3) event binding		()
+	4) two way data binding	[()]
+
+
+What is 2 way data binding
+	the value of a variable is bound to a property and vice versa
+
+	FormsModule
+		at this moment, i have not imported this model yet
+
+
+Steps for 2 way data binding:
+1) app.module.ts
+	imports
+		FormsModule
+
+import { FormsModule } from '@angular/forms';
+
+2) in .ts file
+	declare a variable and set a value
+		username:string="abdul";
+3) <input type="text" name="username" [(ngModel)]="username" />
+
+4) use interpolation to observe the value of the variable
+	{{username}}
+
+now, check in browser,
+	change the value of the text box and see that the change reflects in the variable
+
+
+Task:
+use two way data binding to change the color or any using various html elements
+dropdown list
+color  of paragraph
+
+-----------------------------------------------
+Template
+-----------
+What is template
+	html code
+
+in a component decorator
+
+	@Component({
+		selector:'app-login',	
+		template:`<p> some  text here </p>`,
+		styleUrls:['./login/login.component.css']
+	})
+
+
+either template or templateUrl can be used
+
+use ` quote symbold found below esc button and left side of 1 button
+tilde button without shift
+
+using this quote, we can write multi line html code
+
+
+There are  2 approaches used in forms:
+1) template driven forms
+2) reactive forms
+
+lets learn template driven forms
+
+html comes first
+there will be lot of variables in .ts
+they are bound using 2 way data binding in the html
+
+TasK:
+	Create a signup component and accept the following details from the user:
+		User Name:
+		First Name:
+		Last Name:
+		Password:
+		Confirm Password:
+		Email:
+		Phone:
+			
+now, on submitting the button, you need to display the same details in alert box for confirmation.
+
+This is what you entered:
+
+
+
+ng generate class user
+
+
+Solution:
+--------------
+User Name: <input type="text" name="username" id="" class="form-control" [(ngModel)]="username">
+First Name: <input type="text" name="firstname" id="" class="form-control" [(ngModel)]="firstname">
+Last Name: <input type="text" name="lastname" id="" class="form-control" [(ngModel)]="lastname">
+Password: <input type="password" name="password" id="" class="form-control" [(ngModel)]="password">
+Confirm Password: <input type="password" name="cpassword" id="" class="form-control" [(ngModel)]="cpassword">
+Email: <input type="email" name="email" id="" class="form-control" [(ngModel)]="phone">
+Phone: <input type="number" name="phone" id="" class="form-control" [(ngModel)]="email">
+<br>
+<input type="button" value="Submit" class="btn btn-success" (click)="fnSubmit()">
+<br><br><br><br>
+
+
+
+
+import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
+
+
+@Component({
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
+})
+export class SignupComponent implements OnInit {
+  username:string="";
+  password="";
+  firstname="";
+  lastname="";
+  cpassword="";
+  email="";
+  phone="";
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+
+  fnSubmit()
+  {
+    let user:User=new User();
+    user.username=this.username;
+    user.firstname=this.firstname;
+    user.lastname=this.lastname;
+    user.password=this.password;
+    user.cpassword=this.cpassword;
+    user.phone=this.phone;
+    user.email=this.email;
+    
+
+    alert("You entered:"+JSON.stringify(user));
+  }
+}
+
+
