@@ -77,3 +77,86 @@ in ts file
         IT department is Information Technology
     </div>
 </div>
+
+
+--------------------------------------------
+Task (for if)
+----------------
+Enter the marks:...........................
+div
+	Excellent
+div
+	Good
+div
+	Fair
+div
+	Fail
+
+in each div, give a condition
+	<div *ngIf="marks>=80">
+
+> can be &gt;
+
+
+Task for switch
+--------------------
+Create a dropdown list
+
+
+------------------------
+*ngFor
+	we use for each in java, iterating arrays or collections
+	same way, lets create an array and iterate the array using ng for directive
+
+
+
+1) in .ts class, create an array
+	countries=['India','Australia','Srilanka','China'];
+
+2) in .html
+	<ul>
+	    <li *ngFor="let c of countries">{{c}}</li>
+	</ul>
+
+Try this now, and tell me
+--------------------------
+Once you are able to do that, try this
+
+Task:
+-------
+1) create a class "Employee"
+	ng g class employee
+2) in component.ts
+	create an array of employees
+3) add 3 to 4 employee objects to the array
+
+4) display the employee details in html 
+	as a table
+
+
+Steps:
+1) create a class
+	ng g class employee
+
+2) in Employee class, create a constructor with arguments
+	
+3) in .ts create an array of employees
+	employees:Employee[]=[];
+4) in constructor of component
+	add few employee objects	(use push method to add elements to an array)
+6) in html code
+	<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Id</th><th>First Name</th><th>Last Name</th><th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of employees">
+            <td>{{ e.id }}</td>
+            <td>{{ e.firstName }}</td>
+            <td>{{ e.lastName }}</td>
+            <td>{{ e.salary }}</td>
+        </tr>
+    </tbody>
+</table>
