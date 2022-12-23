@@ -1,0 +1,79 @@
+ngIf
+ngSwitch
+ngFor
+
+lets create a new project
+1) choose a folder where you want to create an angular project
+	D:\Jag\Capgemini\Dec1stBatch\Angular
+
+2) cmd/ node.js command prompt
+
+3) how to create angular project
+	ng new second-project --routing --style=css
+
+4) cd second-project
+
+5) code .
+	to open vs code in current location
+
+6) ng serve -o
+	run the project and open in browser
+
+ts file should be compiled to become a js file
+when will this happen?
+	we see only src folder, but there is no dist folder,
+	because we have not built the project
+
+		ng build
+
+	this command will build the project
+------------------------------------------
+*ngIf
+	we can choose to show a container or element based on a condition
+
+in .ts file
+
+status:boolean=false;
+
+<p>practise works!</p>
+
+<input type="checkbox" name="status" id="status" [(ngModel)]="status">Show/Hide
+<br>
+
+<br>
+<div *ngIf="status">
+    This is the content of the div. 
+    <p>This is a paragraph</p>
+</div>
+<hr>
+<p *ngIf="status">This para is outside the div</p>
+
+
+
+
+
+---------------------------------
+*ngSwitch
+in ts file
+	dept:string="";
+
+<p>switch-demo works!</p>
+<div [ngSwitch]="dept">
+    <input type="text" name="dept" id="dept" [(ngModel)]="dept">
+    <br>
+    <!-- {{ dept }}
+    {{ dept=='CSE'}} -->
+    <br><br>
+    <div *ngSwitchCase="'CSE'">
+        CSE dept is Computer Science Department
+    </div>
+    <div *ngSwitchCase="'ECE'">
+        ECE dept is Electronics and Communication Engineering
+    </div>
+    <div *ngSwitchCase="'EEE'">
+        EEE is Electical and Electronics Engineering
+    </div>
+    <div *ngSwitchCase="'IT'">
+        IT department is Information Technology
+    </div>
+</div>

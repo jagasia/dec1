@@ -1,0 +1,20 @@
+<p>switch-demo works!</p>
+<div [ngSwitch]="dept">
+    <input type="text" name="dept" id="dept" [(ngModel)]="dept">
+    <br>
+    <!-- {{ dept }}
+    {{ dept=='CSE'}} -->
+    <br><br>
+    <div *ngSwitchCase="'CSE'">
+        CSE dept is Computer Science Department
+    </div>
+    <div *ngSwitchCase="'ECE'">
+        ECE dept is Electronics and Communication Engineering
+    </div>
+    <div *ngSwitchCase="'EEE'">
+        EEE is Electical and Electronics Engineering
+    </div>
+    <div *ngSwitchCase="'IT'">
+        IT department is Information Technology
+    </div>
+</div>

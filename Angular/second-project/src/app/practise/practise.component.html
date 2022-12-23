@@ -1,0 +1,12 @@
+<p>practise works!</p>
+
+<input type="checkbox" name="status" id="status" [(ngModel)]="status">Show/Hide
+<br>
+
+<br>
+<div *ngIf="status">
+    This is the content of the div. 
+    <p>This is a paragraph</p>
+</div>
+<hr>
+<p *ngIf="status">This para is outside the div</p>
