@@ -160,3 +160,79 @@ Steps:
         </tr>
     </tbody>
 </table>
+
+
+---------------------------------------------------------
+In our project,	
+	can you find any nested components?
+	parent component,
+	child component
+
+
+in our example:
+	AppComponent 
+		is the parent component. Because, we have plugged 3 child components in app component.
+		
+
+Scenario:
+------------
+You are asked to create a LoginComponent and plug it in AppComponent
+
+this login component's background color should be changeable by the parent component
+
+
+in app:
+	<app-login color="blue"></app-login>
+
+the parent component, is trying to give an input to the child component
+
+How this input can be captured by the child component?
+
+in .ts class,
+
+declare a variable
+
+@Input()	color:string="";
+
+
+
+------------
+Task:
+
+You have plugged lot of components as child components to the parent called AppComponent
+Now, each component can have title, and that title can be chosen by the parent component.
+
+Steps:
+1) create a variable called "title" in the child components, decorated by @Input() decorator
+2) in parent, send input to the child component as attribute
+
+
+
+------------------------------------
+Now, Lets learn @Output() decorator.
+What do you think output will be?
+	because, you know what is input.
+very good. Child component sends output to the parent component.
+
+But actually, child emits an event. That event can be handled by the parent component.
+
+Scenario:
+You are creating a LoginComponent (this will be the child component for AppComponent)
+
+Now, the main reason, why we created this login component, is that it should be reusable.
+So, login is success or failure, should be decided by the parent component that uses child component.
+
+imagine, somebody else is creating this login component.
+You are using it in the AppComponent.
+
+But the login button is inside the login component. So click event of login button can be handled by LoginComponent only.
+
+So, when we click the login button, inside login component, we should raise an event, that can be handled by the app component.
+
+
+
+
+
+
+
+

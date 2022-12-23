@@ -9,7 +9,9 @@
       <app-switch-demo></app-switch-demo>
     </div>
     <div class="col-sm-4">
-      <app-practise></app-practise>
+      <!-- <app-practise></app-practise> -->
+      <input type="text" name="color" id="" [(ngModel)]="color" >
+      <app-login [color]="color" (loginEvent)="fnLoginEvent($event)"></app-login>
     </div>
     <div class="col-sm-4">
       <app-for-demo></app-for-demo>

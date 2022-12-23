@@ -5,10 +5,10 @@
 </ul>
 <br>
 <form>
-    Id: <input type="number" name="id" class="form-control" [(ngModel)]="id">
-    First Name: <input type="text" name="firstName" id="" class="form-control" [(ngModel)]="firstName">
-    Last Name: <input type="text" name="lastName" id="" class="form-control" [(ngModel)]="lastName">
-    Salary: <input type="number" name="salary" id="" class="form-control" [(ngModel)]="salary">
+    Id: <input type="number" name="id" class="form-control" [(ngModel)]="e.id">
+    First Name: <input type="text" name="firstName" id="" class="form-control" [(ngModel)]="e.firstName">
+    Last Name: <input type="text" name="lastName" id="" class="form-control" [(ngModel)]="e.lastName">
+    Salary: <input type="number" name="salary" id="" class="form-control" [(ngModel)]="e.salary">
     <br>
     <input type="button" value="Add" class="btn btn-success" (click)="fnAdd()">
 </form>

@@ -18,6 +18,8 @@ export class ForDemoComponent implements OnInit {
   lastName:string='';
   salary:number=0;
 
+  e:Employee=new Employee(0,'','',0);
+
   constructor() {     
     this.employees.push(new Employee(1, "Raj","Kumar",123456));
     this.employees.push(new Employee(2, "Abdul","Raheem",213456));
@@ -30,11 +32,13 @@ export class ForDemoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
   fnAdd()
   {
-    let emp:Employee=new Employee(this.id,this.firstName,this.lastName,this.salary);
-    console.log(emp);
-    this.employees.push(emp);
+    // let emp:Employee=new Employee(this.id,this.firstName,this.lastName,this.salary);
+
+    // console.log(emp);
+    this.employees.push(this.e);
     
   }
 

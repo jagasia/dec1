@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { PractiseComponent } from './practise/practise.component';
 import { SwitchDemoComponent } from './switch-demo/switch-demo.component';
 import { ForDemoComponent } from './for-demo/for-demo.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PractiseComponent,
     SwitchDemoComponent,
-    ForDemoComponent
+    ForDemoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
