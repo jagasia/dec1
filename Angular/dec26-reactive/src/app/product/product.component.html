@@ -1,10 +1,16 @@
+
 <form [formGroup]="productForm">
-    Id: <input type="number" formControlName="id" class="form-control">
-    Name: <input type="text" formControlName="name" class="form-control">
-    Price: <input type="number" formControlName="price" class="form-control">
+    Id: <input type="number" formControlName="id" class="form-control" [ngClass]="{'is-invalid':productForm.controls.id.errors && productForm.controls.id.touched }" >
+    <p *ngIf="productForm.controls.id.errors && productForm.controls.id.touched" class="alert-danger">Id cannot be blank</p>
+    Name: <input type="text" formControlName="name" class="form-control" [ngClass]="{'is-invalid':productForm.controls.name.errors && productForm.controls.name.touched}">
+    <p *ngIf="productForm.controls.name.errors.required && productForm.controls.name.touched" class="alert-danger">Name cannot be blank</p>
+    Price: <input type="number" formControlName="price" class="form-control"  [ngClass]="{'is-invalid':productForm.controls.price.errors && productForm.controls.price.touched}">
     <br>
-    <input type="button" value="Add" class="btn btn-success">&nbsp;
+    <input type="button" value="Add" class="btn btn-success" [ngClass]="{'disabled':productForm.valid}" (click)="fnSubmit()">&nbsp;
     <input type="reset" value="Reset" class="btn btn-warning">
 </form>
 <br>
-{{ productForm.value | json }}
+form valid?: {{ productForm.valid | json}} <br>
+Id status:{{ productForm.controls.id.valid | json }}   <br>
+Name status:{{ productForm.controls.name.valid | json }}   <br>
+Price status:{{ productForm.controls.price.valid |json }} <br>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-product',
@@ -11,13 +11,18 @@ export class ProductComponent implements OnInit {
 
   constructor(private fb:FormBuilder) { 
     this.productForm=this.fb.group({
-      id:[],
-      name:[],
-      price:[]
+      id:['', Validators.required],
+      name:['',[Validators.required]],
+      price:['', Validators.required]
     });
   }
 
   ngOnInit(): void {
   }
 
+  fnSubmit()
+  {
+    if(this.productForm.valid)
+      alert("Submiting...");
+  }
 }

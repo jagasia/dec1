@@ -128,3 +128,72 @@ Steps for reactive forms:
 
 
 
+app.module.ts		DO NOT KEEP THIS OPEN
+
+
+
+x=020;		//octal
+x=
+
+keywords:
+------------------
+static
+final
+transient		non persistent
+volatile		thread safe variable			cache
+default		java 8 interfaces can contain		default methods
+
+
+
+static:
+------------
+	data member
+	method
+	block
+
+static data member
+	public class Employee
+	{
+		static final String companyName="Capgemini";
+	}
+
+	a static member of a class does not belong to any particular instance (object) of the class
+	if i create 5 objects of Employee, all objects share the same companyName variable. Each object do not have separate copy of the variable.
+
+	
+final
+	whenever a final data member is declared in a class, it is good to declare it as "static" also
+
+class MyException extends Exception
+{
+	public MyException(String message)
+	{
+		super(message);
+	}
+}
+
+List<Employee> empList=new ArrayList<>();
+empList.add(new Employee(1, "Ram","ECE",123456.0);
+empList.add(new Employee(1, "Ram","EEE",123456.0);
+empList.add(new Employee(1, "Ram","ECE",123456.0);
+empList.add(new Employee(1, "Ram","CSE",123456.0);
+empList.add(new Employee(1, "Ram","ECE",123456.0);
+empList.add(new Employee(1, "Ram","EEE",123456.0);
+empList.add(new Employee(1, "Ram","Civil",123456.0);
+empList.add(new Employee(1, "Ram","ECE",123456.0);
+empList.add(new Employee(1, "Ram","EEE",123456.0);
+
+
+DEPARTMENT wise AVERAGE SALARY
+
+HashMap<String,Double> result=new HashMap<String,Double>();
+
+stream api
+
+empList.stream()
+
+
+
+ece
+get(dept)
+
