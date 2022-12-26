@@ -1,0 +1,10 @@
+<form [formGroup]="productForm">
+    Id: <input type="number" formControlName="id" class="form-control">
+    Name: <input type="text" formControlName="name" class="form-control">
+    Price: <input type="number" formControlName="price" class="form-control">
+    <br>
+    <input type="button" value="Add" class="btn btn-success">&nbsp;
+    <input type="reset" value="Reset" class="btn btn-warning">
+</form>
+<br>
+{{ productForm.value | json }}

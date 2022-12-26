@@ -230,8 +230,38 @@ But the login button is inside the login component. So click event of login butt
 So, when we click the login button, inside login component, we should raise an event, that can be handled by the app component.
 
 
+1) in Login component, button client event handler,
+	emit an event
+
+@Output() loginEvent:EventEmitter<User>=new EventEmitter<User>();
+
+fnLogin()
+  {
+    // alert('Login button is clicked');
+    // alert(this.username);
+    let user:User=new User();
+    user.username=this.username;
+    user.password=this.password;
+    this.loginEvent.emit(user);
+    
+  }
+
+2) in AppComponent, handle the event
+	<app-login [color]="color" (loginEvent)="fnLoginEvent($event)"></app-login>
 
 
+fnLoginEvent(args:User)
+  {
+    // alert(JSON.stringify(args));
+    if(args.username==args.password)
+      alert('Login failed');
+    else
+      alert('Login success');
+  }
+
+
+Try this now in your LoginComponent
+-----------------------------------------------------
 
 
 
