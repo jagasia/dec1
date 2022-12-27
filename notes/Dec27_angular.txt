@@ -91,4 +91,30 @@ export class ProductService {
 	i) in app.module.ts
 		import 	ReactiveFormsModule
 
-7) 
+-------------------------
+Routing
+-------------
+	used to provide links, redirection across components
+
+	hyperlink is link to page
+	router link is link to component
+
+
+in angular project, routing module should be included	
+	i) while creating project, we choose to add routing module
+	
+1) in app-routing.module.ts
+	const routes: Routes = [
+  {path:'product',component:ProductComponent}
+];
+
+
+2) where do you want to render the component?
+	<router-outlet></router-outlet>
+
+3) http://localhost:4200/product
+
+4) <a class="nav-link" routerLink="product">Link 1</a>
+
+	when we click the link, the component is rendered in the <router-outlet></router-outlet>
+
