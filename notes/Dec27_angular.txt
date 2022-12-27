@@ -11,3 +11,29 @@ JSON server
 
 
 
+1) install json server
+	
+	npm i json-server -g
+
+2) create a folder for json server in your computer
+	D:\Jag\Capgemini\Dec1stBatch\json_server
+
+3) open notepad
+	save the file as "db.json" in D:\Jag\Capgemini\Dec1stBatch\json_server
+
+4) inside the file, type some json strings as an array
+	{
+	"product":[
+		{"id":"1","name":"pencil","price":"7"},
+		{"id":"2","name":"pen","price":"17"}
+		],
+	"customer":[
+		 {"id":"1","firstName":"Raja","lastName":"Siva Kumar"}
+		]
+}
+
+5) go to cmd prompt/ node.js command prompt,
+	navigate to the folder that contains db.json
+
+6) run this command:
+	json-server --watch db.json
