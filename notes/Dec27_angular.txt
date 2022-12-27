@@ -37,3 +37,58 @@ JSON server
 
 6) run this command:
 	json-server --watch db.json
+
+---------------Angular steps-----------
+1) ng g s product
+2) app.module.ts
+	import
+		HttpClientModule		from '@angular/common/http'
+3) in product.service.ts
+	in constructor, inject http client
+
+	import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProductService {
+  URL="http://localhost:3000/product";
+  constructor(private http:HttpClient) { }
+
+  getAllProducts()
+  {
+    return this.http.get(this.URL);
+  }
+
+  findProductById(id:number)
+  {
+    return this.http.get(this.URL+"/"+id);
+  }
+
+  addProduct(product:any)
+  {
+    return this.http.post(this.URL,product);
+  }
+
+  updateProduct(product:any)
+  {
+    return this.http.put(this.URL,product);
+  }
+
+  deleteProduct(id:number)
+  {
+    return this.http.delete(this.URL+"/id");
+  }
+}
+
+4) create a component
+	ng g c product
+
+5) plug the component  in app component
+
+6) create a  reactive form
+	i) in app.module.ts
+		import 	ReactiveFormsModule
+
+7) 
