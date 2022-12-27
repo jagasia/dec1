@@ -118,3 +118,24 @@ in angular project, routing module should be included
 
 	when we click the link, the component is rendered in the <router-outlet></router-outlet>
 
+
+install bootstrap in angular
+------------------------------------
+	npm install --save bootstrap@4.0.0-beta.3
+(or)
+	npm install --save bootstrap
+
+style:css
+
+@import url(https://unpkg.com/bootstrap@4.1.0/dist/css/bootstrap.min.css)
+
+or
+
+angular.json file:
+------------------
+"styles": [
+  "src/styles.css",
+  "node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+
+
