@@ -1,0 +1,20 @@
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Id</th><th>Name</th><th>Country</th><th>Logo</th><th>Slogan</th><th>Head qtrs</th><th>Website</th><th>Established</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of airlines">
+            <td>{{ a.id }}</td>
+            <td>{{ a.name }}</td>
+            <td>{{ a.country }}</td>
+            <td><img [src]="a.logo" alt="" height="50" /></td>
+            <td>{{ a.slogan }}</td>
+            <td>{{ a.head_quaters }}</td>
+            <td>{{ a.website }}</td>
+            <td><a [href]="a.established">{{ a.established }}</a></td>
+
+      </tr>
+    </tbody>
+  </table>

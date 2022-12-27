@@ -6,16 +6,22 @@ import { AppComponent } from './app.component';
 
 import { ReactiveFormsModule  } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AirlineComponent } from './airline/airline.component';
+import { AirlineGridComponent } from './airline-grid/airline-grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
+    AirlineComponent,
+    AirlineGridComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

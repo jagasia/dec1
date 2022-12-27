@@ -1,0 +1,13 @@
+REST API
+	REpresentational State Transfer
+
+JSON server
+
+	JavaScript Object Notation
+
+[{key:value, key2:value2, key3:value3},
+{key:value, key2:value2, key3:value3},
+{key:value, key2:value2, key3:value3}]
+
+
+

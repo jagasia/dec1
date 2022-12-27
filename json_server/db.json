@@ -1,0 +1,9 @@
+{
+	"product":[
+		{"id":"1","name":"pencil","price":"7"},
+		{"id":"2","name":"pen","price":"17"}
+		],
+	"customer":[
+		 {"id":"1","firstName":"Raja","lastName":"Siva Kumar"}
+		]
+}

@@ -197,3 +197,50 @@ empList.stream()
 ece
 get(dept)
 
+---------------------------------
+Reactive Forms Validations
+------------------------------------
+id
+	only 4 digits
+	required
+	only number
+	
+price
+	> 0 
+
+------------------------------------------
+How angular frontend can access rest api backend?
+
+
+
+https://api.instantwebtools.net/v1/airlines
+	GET			SELECT	
+	POST			INSERT
+	PUT			UPDATE
+	DELETE			DELETE
+	PATCH			UPDATE not all the fields
+
+
+
+
+GET
+	all the records
+GET	/id
+	only zero or one row
+
+
+
+Angular supports accessing REST api using 
+	HttpClientModule
+
+1) go to app.module.ts
+	import { HttpClientModule } from '@angular/common/http';
+
+2) create a service that access the  rest api
+	ng g s airline
+
+3) in airline.service.ts
+	import { HttpClient } from '@angular/common/http';
+
+	constructor(private http:HttpClient) { }
+
