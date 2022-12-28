@@ -1,0 +1,161 @@
+Revision
+-----------
+DBMS
+RDBMS
+HTML
+CSS
+Javascript
+Core Java
+Bootstrap
+Angular
+
+
+DBMS
+----------
+DCL	GRANT, REVOKE
+DQL	SELECT
+DML	INSERT, UPDATE, DELETE
+DDL	CREATE, ALTER, DROP, TRUNCATE
+TCL	COMMIT, SAVEPOINT, ROLLBACK
+Functions
+	Aggregate
+Joins
+Sub query
+
+
+SELECT
+	SELECT * FROM EMPLOYEES;
+
+WHERE
+GROUP BY
+HAVING
+ORDER BY	ASC/DESC
+
+Operators
+	LIKE
+	IN
+	NOT IN
+	BETWEEN	10 AND 20
+	NOT BETWEEN
+	ALL
+	ANY
+
+>=ALL
+>=ANY
+
+when sub query returns more than 1 row, we cannot compare using > >= < <= != etc. But with the help of ALL or ANY
+we can use
+
+
+
+GROUP BY
+-----------------
+SUM
+MIN
+COUNT
+MAX
+COUNT
+AVG
+
+Which function returns the largest integer lesser than the given number?
+	FLOOR
+	
+
+SELECTION
+	restriction on the rows
+PROJECTION
+	only certain columns
+
+UNION
+UNION ALL
+INTERSECT
+MINUS
+
+
+
+SELECT
+UNION
+SELECT
+
+html
+	div		block element
+	span		in-line element
+	p		block element
+
+html5
+	semantic tags
+	header		<div class="header">
+	footer
+	summary
+
+	geo location
+	video
+	audio
+	web storage
+
+CSS
+	types
+		in-line			style=""
+		internal			<style>
+		external			<link rel="" href="" >
+	selectors
+		.	class selector
+		#	id selector
+		*	universal selector
+		:	pseudo selector
+
+	<body bgcolor="blue">		html background color
+	<body style="background-color:blue">	css based
+
+in css
+	color:red
+		color is always text color	foreground color
+	background-color: red
+		
+:focus
+:blur
+:click
+
+
+Javascript:
+---------------
+document.getElementById("txt")
+	this returns the object representation of the textbox
+document.getElementById("txt").value
+	returns the value of the text box
+
+document.getElementsByName
+
+what is the difference between
+	innerHTML
+	innerText
+
+	whenever you  want to write content inside a container element	(div, span, p, etc)
+	scalar elements like textbox have "value" property
+	but container elements like div, span, have "innerHTML" or "innerText"
+
+
+innerText="<b>india</b>"
+innerHTML="<b>india</b>"
+
+
+events
+	blur	when the focus is lost
+	focus
+	click
+	keyup
+
+event binding
+
+
+<input type="text" id="txt1" onclick="fn1()" />
+
+
+<input type="text" id="txt1" />
+
+in javascript
+
+	document.getElementById("txt1").addEventListener("click",fn1);
+	document.getElementById("txt1").addEventListener("click",()=>{	// code here });
+DOM
+	
